@@ -7,6 +7,7 @@ import {
     PawPrint,
     CircleCheckBig,
     Instagram,
+    Rabbit,
     type Icon as LucideIcon,
   } from "lucide-react";
   
@@ -18,6 +19,7 @@ import {
     orbit: Orbit,
     search: Search,
     paw: PawPrint,
+    rabbit: Rabbit,
     check: CircleCheckBig,
     instagram: Instagram,
     blank: (props: LucideProps) => (
