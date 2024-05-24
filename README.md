@@ -1,4 +1,4 @@
-# u18elect-web
+# u18election-web
 The official website for the under 18 elections - created by unpaid labour
 
 ## Getting Started
