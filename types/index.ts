@@ -1,4 +1,3 @@
-
 import { Icons } from "@/components/icons";
 
 export interface NavItem {
@@ -8,16 +7,15 @@ export interface NavItem {
     external?: boolean;
     icon?: keyof typeof Icons;
     label?: string;
-  }
+}
   
-  export interface NavItemWithChildren extends NavItem {
+export interface NavItemWithChildren extends NavItem {
     items: NavItemWithChildren[];
-  }
+}
   
-  export interface MainNavItem extends NavItem {}
-  
-  export interface SidebarNavItem extends NavItemWithChildren {}
-  
-  export interface MainNavProps {
+export interface MainNavItem extends NavItem {}
+export interface SidebarNavItem extends NavItemWithChildren {}
+
+export interface MainNavProps {
     items?: NavItem[];
-  }
+}
