@@ -1,18 +1,14 @@
+import "@/styles/globals.css";
 import { siteConfig } from "@/config/site";
 import type { Metadata, Viewport } from "next";
-import { Inter as FontSans } from "next/font/google";
 
-import { SiteHeader } from "@/components/navbar/site-header";
+import { fontSans } from "@/lib/fonts";
+
+import { SiteHeader } from "@/components/site-header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { cn } from "@/lib/utils";
-import "./globals.css";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export const viewport: Viewport = {
   themeColor: [
@@ -36,19 +32,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            <SiteHeader />
-            <div className="relative flex min-h-screen flex-col">
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <SiteHeader />
+          <div className="relative flex min-h-screen flex-col">
+            <div className="flex-1">{children}</div>
+          </div>
+          <TailwindIndicator />
+        </ThemeProvider>
       </body>
     </html>
   );
