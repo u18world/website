@@ -76,7 +76,7 @@ export default function Home() {
   );
 }
 
-export const projects = [
+const projects = [
   {
     title: "The Service Commission",
     description:
