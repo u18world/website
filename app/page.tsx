@@ -8,6 +8,7 @@ import {
   DropdownItem,
 } from "@nextui-org/react";
 import {  Button } from '@/components/ui/button'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,18 +24,18 @@ export default function Home() {
             </p>
           </div>
           <Dropdown className="bordered-md">
-          <DropdownTrigger>
-            <Button variant="outline">Open Menu</Button>
-          </DropdownTrigger>
-          <DropdownMenu aria-label="Static Actions">
-            <DropdownItem key="new">New file</DropdownItem>
-            <DropdownItem key="copy">Copy link</DropdownItem>
-            <DropdownItem key="edit">Edit file</DropdownItem>
-            <DropdownItem key="delete" className="text-danger" color="danger">
-              Delete file
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+            <DropdownTrigger>
+              <Button variant="outline">Open Menu</Button>
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Links">
+              <DropdownItem key="404">
+                <Link href="/404">404</Link>
+              </DropdownItem>
+              <DropdownItem key="blog">
+                <Link href="/blog">Blog</Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </div>
       </main>
     </Providers>
