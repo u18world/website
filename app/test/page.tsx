@@ -242,7 +242,7 @@ export default function Component() {
             </h2>
             <p className="text-gray-700">
               The Under-18 World has 14 superheroes with superpowers, and
-              'superstars' who perform well.
+              &apos;superstars&apos; who perform well.
             </p>
             <div className="flex gap-4">
               <Button className="bg-[#4c51bf] text-white hover:bg-[#7367f0]">
@@ -289,8 +289,8 @@ export default function Component() {
             </h2>
             <p className="text-gray-700">
               Under-18 elections are a crucial part of the Under-18 World, with
-              an 'Under-18 World Cell' in each school being the core of the
-              world's functionality within the school.
+              an &apos;Under-18 World Cell&apos; in each school being the core
+              of the world&apos;s functionality within the school.
             </p>
             <div className="flex gap-4">
               <Button className="bg-[#4c51bf] text-white hover:bg-[#7367f0]">
