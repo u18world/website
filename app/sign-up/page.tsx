@@ -37,28 +37,6 @@ const SignupValidation = z.object({
     .min(8, { message: "Password must be at least 8 characters." }),
 });
 
-
-async function saveUserToDB(user: {
-  accountId: string;
-  email: string;
-  name: string;
-  imageUrl: URL;
-  username?: string;
-}) {
-  try {
-    const newUser = await databases.createDocument(
-      appwriteConfig.databaseId,
-      appwriteConfig.userCollectionId,
-      ID.unique(),
-      user
-    );
-
-    return newUser;
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 const SignupForm = () => {
   const navigate = useRouter();
   const isLoading = false;
@@ -82,21 +60,11 @@ const SignupForm = () => {
         user.name
       );
 
-      if (!newAccount) throw Error;
-
       const avatarUrl = avatars.getInitials(user.name);
 
-      const newUser = await saveUserToDB({
-        accountId: newAccount.$id,
-        name: newAccount.name,
-        email: newAccount.email,
-        username: user.username,
-        imageUrl: avatarUrl,
-      });
 
-      if (!newUser) {
+      if (!newAccount) {
         toast({ title: "Sign up failed. Please try again." });
-
         return;
       }
 
