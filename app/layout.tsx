@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import type { Metadata, Viewport } from "next";
 
 import { fontSans } from "@/lib/fonts";
+import { Toaster } from "@/components/ui/toaster";
 
 import { SiteHeader } from "@/components/site-header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
@@ -44,6 +45,7 @@ export default function RootLayout({
           <div className="relative flex flex-col">
             <div className="flex-1">{children}</div>
           </div>
+          <Toaster/>
           <TailwindIndicator />
         </ThemeProvider>
       </body>
