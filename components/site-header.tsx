@@ -6,7 +6,7 @@ import { Icons } from "@/components/icons";
 import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants, Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   return (
@@ -68,6 +68,7 @@ export function SiteHeader() {
               </div>
             </Link>
             <ThemeToggle />
+            <Button>Join Now</Button>
           </nav>
         </div>
       </div>

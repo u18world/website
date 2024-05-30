@@ -1,6 +1,9 @@
 "use client";
 import { Spotlight } from "@/components/ui/spotlight";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import Image from "next/image";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3rd-card";
+import Link from "next/link";
 
 export default function Home() {
   return (
