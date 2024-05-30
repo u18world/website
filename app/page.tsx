@@ -194,7 +194,7 @@ export default function Home() {
             </h2>
             <p className="text-zinc-400">
               The Under-18 World has 14 superheroes with superpowers, and
-              'superstars' who perform well.
+              &apos;superstars&apos; who perform well.
             </p>
             <div className="flex gap-4">
               <Link href="#">

@@ -53,17 +53,17 @@ export default function Component() {
                 <Input disabled id="email" value="mahesh.babu@example.com" />
               </div>
               <div className="space-y-1">
-                <Label htmlFor="parent-name">Parent's Name</Label>
+                <Label htmlFor="parent-name">Parent&apos;s Name</Label>
                 <Input disabled id="parent-name" value="Indira Devi" />
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1">
-                <Label htmlFor="parent-phone">Parent's Phone</Label>
+                <Label htmlFor="parent-phone">Parent&apos;s Phone</Label>
                 <Input disabled id="parent-phone" value="+1 (987) 654-3210" />
               </div>
               <div className="space-y-1">
-                <Label htmlFor="parent-email">Parent's Email</Label>
+                <Label htmlFor="parent-email">Parent&apos;s Email</Label>
                 <Input
                   disabled
                   id="parent-email"
@@ -157,9 +157,7 @@ export default function Component() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
             <Card className="bg-white dark:bg-gray-950 shadow-lg">
               <CardHeader>
-                <CardTitle className="dark:text-white">
-                  MIE Hackathon
-                </CardTitle>
+                <CardTitle className="dark:text-white">MIE Hackathon</CardTitle>
                 <CardDescription className="text-[#4c51bf]/80 dark:text-gray-400">
                   Join us for a 24-hour coding challenge to solve real-world
                   problems.
