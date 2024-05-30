@@ -17,6 +17,23 @@ export function SiteHeader() {
         <div className="flex flex-1 items-center space-x-2 justify-end">
           <nav className="flex items-center">
             <Link
+              href={siteConfig.links.youtube}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                className={cn(
+                  buttonVariants({
+                    variant: "ghost",
+                  }),
+                  "w-9 px-0"
+                )}
+              >
+                <Icons.youtube className="h-5 w-5" />
+                <span className="sr-only">Youtube</span>
+              </div>
+            </Link>
+            <Link
               href={siteConfig.links.twitter}
               target="_blank"
               rel="noreferrer"

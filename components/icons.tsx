@@ -9,6 +9,7 @@ import {
     Instagram,
     Rabbit,
     type Icon as LucideIcon,
+    Youtube,
   } from "lucide-react";
   
   export type Icon = typeof LucideIcon;
@@ -22,6 +23,7 @@ import {
     rabbit: Rabbit,
     check: CircleCheckBig,
     instagram: Instagram,
+    youtube: Youtube,
     blank: (props: LucideProps) => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
