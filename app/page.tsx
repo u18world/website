@@ -1,6 +1,8 @@
 "use client";
 import { Spotlight } from "@/components/ui/spotlight";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -72,6 +74,152 @@ export default function Home() {
       <div className="max-w-5xl mx-auto px-8">
         <HoverEffect items={projects} />
       </div>
+      <section className="py-12 px-6 md:px-12 lg:px-24">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
+                Latest Updates
+              </h2>
+              <div className="mt-4 space-y-4">
+                <div className="border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 bg-black rounded-lg p-4 flex items-center shadow-md">
+                  <img
+                    alt="Update"
+                    className="rounded-lg mr-4 shadow-lg"
+                    height={80}
+                    src="/placeholder.svg"
+                    style={{
+                      aspectRatio: "80/80",
+                      objectFit: "cover",
+                    }}
+                    width={80}
+                  />
+                  <div>
+                    <h3 className="text-lg font-bold text-white">
+                      New Superhero Unveiled
+                    </h3>
+                    <p className="text-zinc-400 mt-1">
+                      The Under-18 World has a new superhero with the power of
+                      invisibility.
+                    </p>
+                    <Link href="#">
+                      <Button variant="ghost">Learn More</Button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 bg-black rounded-lg p-4 flex items-center shadow-md">
+                  <img
+                    alt="Update"
+                    className="rounded-lg mr-4 shadow-lg"
+                    height={80}
+                    src="/placeholder.svg"
+                    style={{
+                      aspectRatio: "80/80",
+                      objectFit: "cover",
+                    }}
+                    width={80}
+                  />
+                  <div>
+                    <h3 className="text-lg font-bold text-white">
+                      Elections Underway
+                    </h3>
+                    <p className="text-zinc-400  mt-1">
+                      The Under-18 World is holding its biennial elections, with
+                      candidates campaigning across the country.
+                    </p>
+                    <Link href="#">
+                      <Button variant="ghost">Learn More</Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
+                Under-18 Score
+              </h2>
+              <div className="mt-4 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 bg-black  rounded-lg p-6 flex flex-col items-center shadow-md">
+                <div className="text-6xl font-mono text-white">85</div>
+                <p className="text-zinc-400 mt-2 pb-2">
+                  The current Under-18 World score, a measure of the overall
+                  well-being and development of the under-18 population.
+                </p>
+                <Link href="#">
+                  <Button variant="ghost">Learn More</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-12 px-6 ">
+        <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8">
+          <div>
+            <img
+              alt="Careers"
+              className="rounded-lg shadow-lg"
+              height={200}
+              src="/placeholder.svg"
+              style={{
+                aspectRatio: "300/200",
+                objectFit: "cover",
+              }}
+              width={300}
+            />
+          </div>
+          <div className="space-y-4">
+            <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
+              Explore Careers
+            </h2>
+            <p className="text-zinc-400">
+              Under-18s in the Under-18 World can explore different skills and
+              careers, with experts for 24 career domains.
+            </p>
+            <div className="flex gap-4">
+              <Link href="#">
+                <Button className="">Discover Careers</Button>
+              </Link>
+              <Link href="#">
+                <Button variant="ghost">Discover Careers</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-12 px-6">
+        <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
+              Superpowers and Superstars
+            </h2>
+            <p className="text-zinc-400">
+              The Under-18 World has 14 superheroes with superpowers, and
+              'superstars' who perform well.
+            </p>
+            <div className="flex gap-4">
+              <Link href="#">
+                <Button className="">Meet the superheroes</Button>
+              </Link>
+              <Link href="#">
+                <Button variant="ghost">Learn More</Button>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <img
+              alt="Superheroes"
+              className="rounded-lg shadow-lg"
+              height={200}
+              src="/placeholder.svg"
+              style={{
+                aspectRatio: "600/400",
+                objectFit: "cover",
+              }}
+              width={300}
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

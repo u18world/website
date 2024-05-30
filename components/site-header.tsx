@@ -15,7 +15,7 @@ export function SiteHeader() {
         <MainNav />
         <MobileNav />
         <div className="flex flex-1 items-center space-x-2 justify-end">
-          <nav className="flex items-center">
+          <nav className="flex items-center ">
             <Link
               href={siteConfig.links.youtube}
               target="_blank"
@@ -26,7 +26,7 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: "ghost",
                   }),
-                  "w-9 px-0"
+                  "w-9 px-0 mx-px"
                 )}
               >
                 <Icons.youtube className="h-5 w-5" />
@@ -43,7 +43,7 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: "ghost",
                   }),
-                  "w-9 px-0"
+                  "w-9 px-0 mx-px"
                 )}
               >
                 <Icons.twitter className="h-5 w-5" />
@@ -60,7 +60,7 @@ export function SiteHeader() {
                   buttonVariants({
                     variant: "ghost",
                   }),
-                  "w-9 px-0"
+                  "w-9 px-0 mx-px"
                 )}
               >
                 <Icons.instagram className="h-5 w-5" />
@@ -68,7 +68,7 @@ export function SiteHeader() {
               </div>
             </Link>
             <ThemeToggle />
-            <Button>Join Now</Button>
+            <Button className=" mx-px">Join Now</Button>
           </nav>
         </div>
       </div>
