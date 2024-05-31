@@ -24,7 +24,7 @@ export default function Home() {
           fill="white"
         />
         <div className="max-w-[84rem] w-full mx-auto  relative z-20">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 pb-40">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 pb-16">
             <div className="flex flex-col items-start xl:px-0 px-8">
               <svg
                 width="236"
