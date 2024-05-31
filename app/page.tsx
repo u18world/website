@@ -80,7 +80,7 @@ export default function Home() {
               </div>
             </div>
             <div className="pt-16">
-              <MediaPlayer autoPlay autoplay aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
+              <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
                 <MediaProvider />
                 <DefaultVideoLayout icons={defaultLayoutIcons} />
               </MediaPlayer>
