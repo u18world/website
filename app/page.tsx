@@ -1,13 +1,24 @@
 "use client";
+import "@vidstack/react/player/styles/default/theme.css";
+import "@vidstack/react/player/styles/default/layouts/video.css";
+
+import { MediaPlayer, MediaProvider } from "@vidstack/react";
+import {
+  defaultLayoutIcons,
+  DefaultVideoLayout,
+} from "@vidstack/react/player/layouts/default";
+import Meteors from "@/components/ui/meteors";
+import NumberTicker from "@/components/ui/number-ticker";
 import { Spotlight } from "@/components/ui/spotlight";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <div className="relative pb-40  pt-20 md:pt-40 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
+      <div className="relative pb-8 pt-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
@@ -41,7 +52,7 @@ export default function Home() {
                   </linearGradient>
                 </defs>
               </svg>
-              <h1 className="text-3xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
+              <h1 className="text-2xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
                 <span
                   className="tracking-tighter	text-4xl md:text-7xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50"
                   data-brr="1"
@@ -68,6 +79,12 @@ export default function Home() {
                 </a>
               </div>
             </div>
+            <div className="pt-16">
+              <MediaPlayer autoPlay autoplay aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
+                <MediaProvider />
+                <DefaultVideoLayout icons={defaultLayoutIcons} />
+              </MediaPlayer>
+            </div>
           </div>
         </div>
       </div>
@@ -82,89 +99,157 @@ export default function Home() {
                 Latest Updates
               </h2>
               <div className="mt-4 space-y-4">
-                <div className="border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 bg-black rounded-lg p-4 flex items-center shadow-md">
-                  <img
-                    alt="Update"
-                    className="rounded-lg mr-4 shadow-lg"
-                    height={80}
-                    src="/placeholder.svg"
-                    style={{
-                      aspectRatio: "80/80",
-                      objectFit: "cover",
-                    }}
-                    width={80}
-                  />
-                  <div>
-                    <h3 className="text-lg font-bold text-white">
-                      New Superhero Unveiled
-                    </h3>
-                    <p className="text-zinc-400 mt-1">
-                      The Under-18 World has a new superhero with the power of
-                      invisibility.
-                    </p>
-                    <Link href="#">
-                      <Button variant="ghost">Learn More</Button>
-                    </Link>
-                  </div>
-                </div>
-                <div className="border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 bg-black rounded-lg p-4 flex items-center shadow-md">
-                  <img
-                    alt="Update"
-                    className="rounded-lg mr-4 shadow-lg"
-                    height={80}
-                    src="/placeholder.svg"
-                    style={{
-                      aspectRatio: "80/80",
-                      objectFit: "cover",
-                    }}
-                    width={80}
-                  />
-                  <div>
-                    <h3 className="text-lg font-bold text-white">
-                      Elections Underway
-                    </h3>
-                    <p className="text-zinc-400  mt-1">
-                      The Under-18 World is holding its biennial elections, with
-                      candidates campaigning across the country.
-                    </p>
-                    <Link href="#">
-                      <Button variant="ghost">Learn More</Button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
-                Under-18 Score
-              </h2>
-              <div className="mt-4 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 bg-black  rounded-lg p-6 flex flex-col items-center shadow-md">
-                <div className="text-6xl font-mono text-white">85</div>
-                <p className="text-zinc-400 mt-2 pb-2">
-                  The current Under-18 World score, a measure of the overall
-                  well-being and development of the under-18 population.
-                </p>
                 <Link href="#">
-                  <Button variant="ghost">Learn More</Button>
+                  <div className="mt-4 relative flex items-center justify-center overflow-hidden rounded-lg border bg-background p-6 md:shadow-x">
+                    <Image
+                      alt="update"
+                      className="rounded-lg mr-4 shadow-lg"
+                      height={80}
+                      src="https://generated.vusercontent.net/placeholder.svg"
+                      style={{
+                        aspectRatio: "80/80",
+                        objectFit: "cover",
+                      }}
+                      width={80}
+                    />
+                    <div>
+                      <h3 className="text-lg font-bold">
+                        New Superhero Unveiled
+                      </h3>
+                      <p className="text-zinc-400 mt-1">
+                        The Under-18 World has a new superhero with the power of
+                        invisibility.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+                <Link href="#">
+                  <div className="mt-4 relative flex items-center justify-center overflow-hidden rounded-lg border bg-background p-6 md:shadow-x">
+                    <img
+                      alt="Update"
+                      className="rounded-lg mr-4 shadow-lg"
+                      height={80}
+                      src="https://generated.vusercontent.net/placeholder.svg"
+                      style={{
+                        aspectRatio: "80/80",
+                        objectFit: "cover",
+                      }}
+                      width={80}
+                    />
+                    <div>
+                      <h3 className="text-lg font-bold">Elections Underway</h3>
+                      <p className="text-zinc-400  mt-1">
+                        The Under-18 World is holding its biennial elections,
+                        with candidates campaigning across the country.
+                      </p>
+                    </div>
+                  </div>
                 </Link>
               </div>
             </div>
+            <Link href="#">
+              <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
+                Under-18 Score
+              </h2>
+              <div className="mt-4 relative flex items-center justify-center overflow-hidden rounded-lg border bg-background p-6 md:shadow-xl">
+                <Meteors number={30} />
+                <div className="mt-0 rounded-lg p-0 flex flex-col items-center text-center">
+                  <div className="text-6xl font-mono text-white">
+                    <NumberTicker value={85} />
+                  </div>
+                  <p className="text-zinc-400 ">
+                    The current Under-18 World score, a measure of the overall
+                    well-being and development of the under-18 population.
+                  </p>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
       <section className="py-12 px-6 ">
-        <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           <div>
             <img
               alt="Careers"
               className="rounded-lg shadow-lg"
-              height={200}
-              src="/placeholder.svg"
+              height={400}
+              src="https://generated.vusercontent.net/placeholder.svg"
               style={{
-                aspectRatio: "300/200",
+                aspectRatio: "600/400",
                 objectFit: "cover",
               }}
-              width={300}
+              width={600}
+            />
+          </div>
+          <div className="space-y-4">
+            <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
+              Under-18 Elections
+            </h2>
+            <p className="text-zinc-400">
+              Under-18 elections are a crucial part of the Under-18 World, with
+              an &apos;Under-18 World Cell&apos; in each school being the core
+              of the world&apos;s functionality within the school.
+            </p>
+            <div className="flex gap-4">
+              <Link href="#">
+                <Button className="">Discover Careers</Button>
+              </Link>
+              <Link href="#">
+                <Button variant="ghost">Discover Careers</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-12 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
+              Your Journey in U-18 World
+            </h2>
+            <p className="text-zinc-400">
+              Your journey in the Under-18 World starts as an Under-18 student,
+              then progresses to an Under-18 citizen, champion, crusader,
+              ambassador, leader, and finally an Under-18 superstar.
+            </p>
+            <div className="flex gap-4">
+              <Link href="#">
+                <Button className="">Meet the superheroes</Button>
+              </Link>
+              <Link href="#">
+                <Button variant="ghost">Learn More</Button>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <img
+              alt="Superheroes"
+              className="rounded-lg shadow-lg"
+              height={400}
+              src="https://generated.vusercontent.net/placeholder.svg"
+              style={{
+                aspectRatio: "600/400",
+                objectFit: "cover",
+              }}
+              width={600}
+            />
+          </div>
+        </div>
+      </section>
+      <section className="py-12 px-6 ">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          <div>
+            <img
+              alt="Careers"
+              className="rounded-lg shadow-lg"
+              height={400}
+              src="https://generated.vusercontent.net/placeholder.svg"
+              style={{
+                aspectRatio: "600/400",
+                objectFit: "cover",
+              }}
+              width={600}
             />
           </div>
           <div className="space-y-4">
@@ -187,7 +272,7 @@ export default function Home() {
         </div>
       </section>
       <section className="py-12 px-6">
-        <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           <div className="space-y-4">
             <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
               Superpowers and Superstars
@@ -209,13 +294,13 @@ export default function Home() {
             <img
               alt="Superheroes"
               className="rounded-lg shadow-lg"
-              height={200}
-              src="/placeholder.svg"
+              height={400}
+              src="https://generated.vusercontent.net/placeholder.svg"
               style={{
                 aspectRatio: "600/400",
                 objectFit: "cover",
               }}
-              width={300}
+              width={600}
             />
           </div>
         </div>

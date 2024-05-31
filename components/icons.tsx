@@ -10,6 +10,7 @@ import {
     Rabbit,
     type Icon as LucideIcon,
     Youtube,
+    Globe,
   } from "lucide-react";
   
   export type Icon = typeof LucideIcon;
@@ -21,6 +22,7 @@ import {
     search: Search,
     paw: PawPrint,
     rabbit: Rabbit,
+    globe: Globe,
     check: CircleCheckBig,
     instagram: Instagram,
     youtube: Youtube,
