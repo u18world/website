@@ -71,7 +71,7 @@ export default function Home() {
               </svg>
               <h1 className="text-2xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
                 <span
-                  className="tracking-tighter	text-4xl md:text-7xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50"
+                  className="tracking-tighter	text-4xl md:text-7xl font-bold text-start bg-clip-text text-transparent bg-gradient-to-b dark:from-[#fccf92] from-[#f5893f] "
                   data-brr="1"
                 >
                   Welcome to the Under 18 World

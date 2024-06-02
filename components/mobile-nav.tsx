@@ -33,8 +33,10 @@ export function MobileNav() {
             className="flex items-center"
             onOpenChange={setOpen}
           >
-            <Icons.orbit className="mr-2 h-4 w-4" />
-            <span className="font-bold">{siteConfig.name}</span>
+            <Icons.globe className="mr-2 h-4 w-4" />
+            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-b dark:from-[#fccf92] from-[#f5893f] ">
+              {siteConfig.name}
+            </span>
           </MobileLink>
           <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
             <div className="flex flex-col space-y-3">
