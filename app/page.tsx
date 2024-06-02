@@ -30,12 +30,12 @@ export default function Home() {
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
         />
-        <div className="w-full mx-auto relative z-20">
+        <div className="max-w-[84rem] w-full mx-auto relative z-20">
           <iframe
             src="https://kushiaw.netlify.app/"
             className="rounded-md w-full"
             title="Game"
-            height={screen - 200}
+            height={screen - 350}
           />
         </div>
       </div>
