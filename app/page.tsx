@@ -18,16 +18,17 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="relative pb-8 pt-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
+      <div className="relative pb-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
         />
-        <div className="max-w-[84rem] w-full mx-auto  relative z-20">
+        <div className="w-full mx-auto relative z-20">
           <iframe
-            src="https://665c0a2d0cce8c0008e01c25--kushiaw.netlify.app/"
-            className="h-[200] w-[300] rounded-md"
-            title="Iframe Example"
+            src="https://kushiaw.netlify.app/"
+            className="rounded-md w-full"
+            title="Game"
+            height={screen.height - 200}
           />
         </div>
       </div>
@@ -88,7 +89,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="pt-16">
+            <div>
               <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
                 <MediaProvider />
                 <DefaultVideoLayout icons={defaultLayoutIcons} />
