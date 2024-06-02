@@ -28,7 +28,7 @@ export default function Home() {
       <div className="relative pb-8 pt-4 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="white"
+          fill="orange"
         />
         <div className="max-w-[84rem] w-full mx-auto relative z-20">
           <iframe
