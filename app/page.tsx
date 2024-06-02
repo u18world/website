@@ -24,6 +24,15 @@ export default function Home() {
           fill="white"
         />
         <div className="max-w-[84rem] w-full mx-auto  relative z-20">
+          <iframe
+            src="https://665c0a2d0cce8c0008e01c25--kushiaw.netlify.app/"
+            className="h-[200] w-[300] rounded-md"
+            title="Iframe Example"
+          />
+        </div>
+      </div>
+      <div className="relative pb-8 pt-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
+        <div className="max-w-[84rem] w-full mx-auto  relative z-20">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 pb-16">
             <div className="flex flex-col items-start xl:px-0 px-8">
               <svg
