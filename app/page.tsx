@@ -14,8 +14,15 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [screen, setScreenSize] = useState(1000)
+  useEffect(() => {
+    const size = window.screen.height;
+    setScreenSize(size);
+  }, []);
+    
   return (
     <>
       <div className="relative pb-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
@@ -28,7 +35,7 @@ export default function Home() {
             src="https://kushiaw.netlify.app/"
             className="rounded-md w-full"
             title="Game"
-            height={screen.height - 200}
+            height={screen - 200}
           />
         </div>
       </div>
