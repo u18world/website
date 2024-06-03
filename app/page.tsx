@@ -71,7 +71,7 @@ export default function Home() {
               </svg>
               <h1 className="text-2xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
                 <span
-                  className="tracking-tighter	text-4xl md:text-7xl font-bold text-start bg-clip-text text-transparent bg-gradient-to-b dark:from-[#fccf92] from-[#f5893f] "
+                  className="tracking-tighter	text-4xl md:text-7xl font-bold text-start bg-clip-text text-transparent bg-gradient-to-b dark:from-[#cee6fa] from-[#f5893f] "
                   data-brr="1"
                 >
                   Welcome to the Under 18 World
@@ -82,18 +82,19 @@ export default function Home() {
                 elected leaders, career opportunities, and superpowers.
               </h2>
               <div className="flex sm:flex-row flex-col space-y-2 justify-center sm:space-y-0 sm:space-x-4 sm:justify-start mb-4 w-full">
-                <a
-                  className="bg-slate-900 no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold text-white px-4 py-2 w-full sm:w-52 h-14 rounded-2xl text-sm text-center items-center justify-center"
-                  href="/"
+                <Button
+                  className=" no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold px-4 py-2 w-full sm:w-52 h-14 rounded-2xl text-sm text-center items-center justify-center"
+              
                 >
                   Explore the World
-                </a>
-                <a
-                  className="w-full sm:w-52 text-sm bg-white bg-black dark:bg-black h-14 border border-transparent  dark:text-white dark:border-white flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
-                  href="/"
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full sm:w-52 text-sm  h-14 border border-transparent  dark:text-white dark:border-white flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+           
                 >
                   Learn More
-                </a>
+                </Button>
               </div>
             </div>
             <div>

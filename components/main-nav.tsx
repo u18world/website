@@ -15,61 +15,72 @@ export function MainNav() {
     <div className="mr-4 hidden lg:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <Icons.globe className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block bg-clip-text text-transparent bg-gradient-to-b dark:from-[#fccf92] from-[#f5893f] ">
+        <span className="hidden font-bold sm:inline-block bg-clip-text text-transparent bg-gradient-to-b dark:from-[#cee6fa] dark:to-[#f5893f] from-[#f5893f] to-[#cee6fa]">
           {siteConfig.name}
         </span>
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <Link
-          href="/"
+          href="/about"
           className={cn(
             "transition-colors hover:text-foreground/80 text-foreground/60",
-            pathname == "/" ? "text-foreground" : "text-foreground/60"
+            pathname == "/about" ? "text-foreground" : "text-foreground/60"
           )}
         >
           About
         </Link>
         <Link
-          href="/"
+          href="/blog"
           className={cn(
             "transition-colors hover:text-foreground/80 text-foreground/60",
-            pathname == "/" ? "text-foreground" : "text-foreground/60"
+            pathname == "/blog" ? "text-foreground" : "text-foreground/60"
+          )}
+        >
+          Blog
+        </Link>
+        <Link
+          href="/leaders"
+          className={cn(
+            "transition-colors hover:text-foreground/80 text-foreground/60",
+            pathname == "/leaders" ? "text-foreground" : "text-foreground/60"
           )}
         >
           Leaders
         </Link>
         <Link
-          href="/"
+          href="/careers"
           className={cn(
             "transition-colors hover:text-foreground/80 text-foreground/60",
-            pathname == "/" ? "text-foreground" : "text-foreground/60"
+            pathname == "/careers" ? "text-foreground" : "text-foreground/60"
           )}
         >
           Careers
         </Link>
         <Link
-          href="/"
+          href="/superheroes"
           className={cn(
             "transition-colors hover:text-foreground/80 text-foreground/60",
-            pathname == "/" ? "text-foreground" : "text-foreground/60"
+            pathname == "/superheroes"
+              ? "text-foreground"
+              : "text-foreground/60"
           )}
         >
           Superheroes
         </Link>
         <Link
-          href="/"
+          href="/elections"
           className={cn(
             "transition-colors hover:text-foreground/80 text-foreground/60",
-            pathname == "/" ? "text-foreground" : "text-foreground/60"
+            pathname == "/elections" ? "text-foreground" : "text-foreground/60"
           )}
         >
           Elections
         </Link>
         <Link
-          href="/"
+          href="/contact"
           className={cn(
             "transition-colors hover:text-foreground/80 text-foreground/60",
-            pathname == "/" ? "text-foreground" : "text-foreground/60"
+            pathname == "/contact" ? "text-foreground" : "text-foreground/60"
           )}
         >
           Contact

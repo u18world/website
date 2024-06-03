@@ -12,7 +12,12 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export default function Component() {
+export const metadata = {
+  title: "Profile",
+  description: "description",
+};
+
+export default function Profile() {
   return (
     <div className="pb-52 pt-16">
       <div className="w-full h-full  max-w-3xl mx-auto bg-white dark:bg-gray-950 rounded-xl shadow-lg overflow-hidden">

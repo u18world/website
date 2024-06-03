@@ -9,27 +9,31 @@ export const mobileConfig: MobileConfig = {
   mainNav: [
     {
       title: "About",
-      href: "/",
+      href: "/about",
+    },
+    {
+      title: "Blog",
+      href: "/blog",
     },
     {
       title: "Leaders",
-      href: "/",
+      href: "/leaders",
     },
     {
       title: "Careers",
-      href: "/",
+      href: "/careers",
     },
     {
       title: "Superheroes",
-      href: "/",
+      href: "/superheroes",
     },
     {
       title: "Elections",
-      href: "/",
+      href: "/elections",
     },
     {
       title: "Contact",
-      href: "/",
+      href: "/contact",
     },
   ],
   sidebarNav: [
