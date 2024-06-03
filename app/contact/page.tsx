@@ -47,11 +47,11 @@ export default function ContactForm() {
 
     if (isValid) {
       try {
-        const firstName = NameRef.current?.value;
+        const name = NameRef.current?.value;
         const email = emailRef.current?.value;
         const text = textRef.current?.value;
         const data = {
-          firstName: firstName,
+          Name: name,
           email: email,
           text: text,
         };
@@ -70,8 +70,8 @@ export default function ContactForm() {
     }
   };
   return (
-    <div className="">
-      <div className="h-screen flex items-center justify-center dark:bg-black/[0.96] antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
+    <div>
+      <div className="h-screen flex items-center justify-center antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
         <div className="dark:border-white/[0.2] border border-transparent max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
           <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
             Contact Form
@@ -97,7 +97,7 @@ export default function ContactForm() {
               <Input
                 id="email"
                 placeholder="imaginee@lol.com"
-                type="text"
+                type="email"
                 ref={emailRef}
               />
               {emailError && (

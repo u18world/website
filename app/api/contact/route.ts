@@ -6,16 +6,15 @@ const resend = new Resend("re_vAi4ytTc_FNZ48fw9rYREmDoQRfZK76pu");
 
 export async function POST(request: Request) {
   const body = await request.json();
-  const { Name, email, phone, text } = body;
+  const { name, email, text } = body;
 
   const { data, error } = await resend.emails.send({
     from: "Impact <onboarding@resend.dev>",
     to: ["avalynndev@gmail.com"],
     subject: "New Impact Order",
     react: EmailTemplate({
-      Name,
+      name,
       email,
-      number: phone || "no phone number",
       text: text || "no message",
     }) as React.ReactElement,
   });
