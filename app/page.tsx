@@ -97,7 +97,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div>
+            <div className="pt-16">
               <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
                 <MediaProvider />
                 <DefaultVideoLayout icons={defaultLayoutIcons} />
