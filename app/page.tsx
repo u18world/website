@@ -39,9 +39,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="relative pb-8 pt-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
+      <div className="relative pt-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
         <div className="max-w-[84rem] w-full mx-auto  relative z-20">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 pb-16">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
             <div className="flex flex-col items-start xl:px-0 px-8">
               <svg
                 width="236"
@@ -69,7 +69,7 @@ export default function Home() {
                   </linearGradient>
                 </defs>
               </svg>
-              <h1 className="text-2xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
+              <h1 className="text-2xl md:text-7xl font-bold mb-2 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
                 <span
                   className="tracking-tighter	text-4xl md:text-7xl font-bold text-start bg-clip-text text-transparent bg-gradient-to-b dark:from-[#cee6fa] from-[#f5893f] "
                   data-brr="1"
@@ -77,11 +77,11 @@ export default function Home() {
                   Welcome to the Under 18 World
                 </span>
               </h1>
-              <h2 className="relative font-regular text-sm sm:text-xl text-zinc-500 tracking-wide mb-8 text-left max-w-2xl antialiased leading-loose __className_b15a0a">
+              <h2 className="relative font-regular text-sm sm:text-xl text-zinc-500 tracking-wide mb-2 text-left max-w-2xl antialiased leading-loose __className_b15a0a">
                 Explore a new world created for under-18s in India, with its own
                 elected leaders, career opportunities, and superpowers.
               </h2>
-              <div className="flex sm:flex-row flex-col space-y-2 justify-center sm:space-y-0 sm:space-x-4 sm:justify-start mb-4 w-full">
+              <div className="flex sm:flex-row flex-col space-y-2 justify-center sm:space-y-0 sm:space-x-4 sm:justify-start w-full">
                 <Button
                   className=" no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold px-4 py-2 w-full sm:w-52 h-14 rounded-2xl text-sm text-center items-center justify-center"
               
