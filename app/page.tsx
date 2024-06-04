@@ -70,15 +70,15 @@ export default function Home() {
                   </linearGradient>
                 </defs>
               </svg>
-              <h1 className="text-2xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
+              <h1 className="text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
                 <span
-                  className="pb-16 tracking-tighter text-2xl md:text-7xl m font-bold text-start bg-clip-text"
+                  className="pb-16 tracking-tighter text-7xl m font-bold text-start bg-clip-text"
                   data-brr="1"
                 >
                   Welcome to the
                 </span>{" "}
               </h1>
-              <h1 className="text-2xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
+              <h1 className="text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
                 <Highlight className=" tracking-tighter text-neutral-800 dark:text-white">
                   Under 18 World
                 </Highlight>

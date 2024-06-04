@@ -17,7 +17,7 @@ export const metadata = {
 
 export default async function BlogPage() {
   return (
-    <div className="container max-w-4xl py-6 lg:py-10 justify-center text-center items-center">
+    <div className="flex flex-col container max-w-4xl py-6 lg:py-10 justify-center text-center items-center">
       <div className="flex flex-col gap-6">
         <h3 className="text-4xl">Lorem ipsum dolor sit amet</h3>
         <h4 className="text-2xl opacity-70">
@@ -29,7 +29,7 @@ export default async function BlogPage() {
       </div>
 
       <hr className="my-8" />
-      <div className="grid gap-10 sm:grid-cols-2 grid-col-3 max-w-4xl px-12">
+      <div className="grid gap-10 md:grid-cols-2 grid-col-3 max-w-4xl">
         <article key="intro" className="group relative flex flex-col space-y-2">
           <Link href="/blog/intro">
             <Card className="w-[350px]">
