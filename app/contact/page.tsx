@@ -11,7 +11,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
+import {
+	E164Number
+} from 'libphonenumber-js/core';
 export default function ContactForm() {
   const NameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
@@ -117,7 +119,7 @@ export default function ContactForm() {
             <LabelInputContainer className="mb-4">
               <Label htmlFor="firstname">Phone Number</Label>
               <PhoneInput
-                value={phoneNumber}
+                value={phoneNumber as E164Number}
                 onChange={setPhoneNumber}
                 placeholder="Enter a phone number"
               />
