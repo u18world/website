@@ -6,10 +6,12 @@ import { fontSans } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/toaster";
 
 import { SiteHeader } from "@/components/site-header";
+import Footer from "@/components/footer";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { cn } from "@/lib/utils";
+
 
 export const viewport: Viewport = {
   themeColor: [
@@ -45,6 +47,7 @@ export default function RootLayout({
           <div className="relative flex flex-col">
             <div className="flex-1">{children}</div>
           </div>
+          <Footer/>
           <Toaster/>
           <TailwindIndicator />
         </ThemeProvider>

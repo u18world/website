@@ -8,6 +8,7 @@ import {
   DefaultVideoLayout,
 } from "@vidstack/react/player/layouts/default";
 import Meteors from "@/components/ui/meteors";
+import { Highlight } from "@/components/ui/hero-highlight";
 import NumberTicker from "@/components/ui/number-ticker";
 import { Spotlight } from "@/components/ui/spotlight";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
@@ -17,12 +18,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [screen, setScreenSize] = useState(1000)
+  const [screen, setScreenSize] = useState(1000);
   useEffect(() => {
     const size = window.screen.height;
     setScreenSize(size);
   }, []);
-    
+
   return (
     <>
       <div className="relative pb-8 pt-4 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
@@ -39,9 +40,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="relative pt-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
+      <div className="relative pb-8 pt-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
         <div className="max-w-[84rem] w-full mx-auto  relative z-20">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 pb-16">
             <div className="flex flex-col items-start xl:px-0 px-8">
               <svg
                 width="236"
@@ -69,35 +70,36 @@ export default function Home() {
                   </linearGradient>
                 </defs>
               </svg>
-              <h1 className="text-2xl md:text-7xl font-bold mb-2 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
+              <h1 className="text-2xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
                 <span
-                  className="tracking-tighter	text-4xl md:text-7xl font-bold text-start bg-clip-text text-transparent bg-gradient-to-b dark:from-[#cee6fa] from-[#f5893f] "
+                  className="pb-16 tracking-tighter text-2xl md:text-7xl m font-bold text-start bg-clip-text"
                   data-brr="1"
                 >
-                  Welcome to the Under 18 World
-                </span>
+                  Welcome to the
+                </span>{" "}
               </h1>
-              <h2 className="relative font-regular text-sm sm:text-xl text-zinc-500 tracking-wide mb-2 text-left max-w-2xl antialiased leading-loose __className_b15a0a">
+              <h1 className="text-2xl md:text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
+                <Highlight className=" tracking-tighter text-neutral-800 dark:text-white">
+                  Under 18 World
+                </Highlight>
+              </h1>
+              <h2 className="relative font-regular text-sm sm:text-xl text-zinc-500 tracking-wide mb-8 text-left max-w-2xl antialiased leading-loose __className_b15a0a">
                 Explore a new world created for under-18s in India, with its own
                 elected leaders, career opportunities, and superpowers.
               </h2>
-              <div className="flex sm:flex-row flex-col space-y-2 justify-center sm:space-y-0 sm:space-x-4 sm:justify-start w-full">
-                <Button
-                  className=" no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold px-4 py-2 w-full sm:w-52 h-14 rounded-2xl text-sm text-center items-center justify-center"
-              
-                >
+              <div className="flex sm:flex-row flex-col space-y-2 justify-center sm:space-y-0 sm:space-x-4 sm:justify-start mb-4 w-full">
+                <Button className=" no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold px-4 py-2 w-full sm:w-52 h-14 rounded-2xl text-sm text-center items-center justify-center">
                   Explore the World
                 </Button>
                 <Button
                   variant="ghost"
                   className="w-full sm:w-52 text-sm  h-14 border border-transparent  dark:text-white dark:border-white flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
-           
                 >
                   Learn More
                 </Button>
               </div>
             </div>
-            <div className="pt-16">
+            <div>
               <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
                 <MediaProvider />
                 <DefaultVideoLayout icons={defaultLayoutIcons} />

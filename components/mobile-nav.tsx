@@ -34,7 +34,7 @@ export function MobileNav() {
             onOpenChange={setOpen}
           >
             <Icons.globe className="mr-2 h-4 w-4" />
-            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-b dark:from-[#cee6fa] from-[#f5893f] ">
+            <span className="font-bold">
               {siteConfig.name}
             </span>
           </MobileLink>

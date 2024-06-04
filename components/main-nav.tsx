@@ -15,7 +15,7 @@ export function MainNav() {
     <div className="mr-4 hidden lg:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <Icons.globe className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block bg-clip-text text-transparent bg-gradient-to-b dark:from-[#cee6fa] dark:to-[#f5893f] from-[#f5893f] to-[#cee6fa]">
+        <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>

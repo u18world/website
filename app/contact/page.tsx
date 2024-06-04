@@ -1,8 +1,16 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { Label } from "@/components/cui/label";
-import { Input } from "@/components/cui/input";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { PhoneInput } from "@/components/ui/phone-input";
 import { cn } from "@/lib/utils";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function ContactForm() {
   const NameRef = useRef<HTMLInputElement | null>(null);
@@ -10,6 +18,7 @@ export default function ContactForm() {
   const textRef = useRef<HTMLInputElement | null>(null);
 
   const [nameError, setNameError] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [emailError, setEmailError] = useState("");
   const [textError, setTextError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -82,7 +91,7 @@ export default function ContactForm() {
 
           <form className="my-8" onSubmit={sendEmail}>
             <LabelInputContainer className="mb-4">
-              <Label htmlFor="firstname">First name</Label>
+              <Label htmlFor="firstname">Name</Label>
               <Input
                 id="firstname"
                 placeholder="Tyler"
@@ -91,7 +100,29 @@ export default function ContactForm() {
               />
               {nameError && <p className="text-red-500 text-sm">{nameError}</p>}
             </LabelInputContainer>
-
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="work">Parent / Student / School</Label>
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="Chose?" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="parent">Parent</SelectItem>
+                  <SelectItem value="student">Student</SelectItem>
+                  <SelectItem value="school">School</SelectItem>
+                </SelectContent>
+              </Select>
+              {nameError && <p className="text-red-500 text-sm">{nameError}</p>}
+            </LabelInputContainer>
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="firstname">Phone Number</Label>
+              <PhoneInput
+                value={phoneNumber}
+                onChange={setPhoneNumber}
+                placeholder="Enter a phone number"
+              />
+              {nameError && <p className="text-red-500 text-sm">{nameError}</p>}
+            </LabelInputContainer>
             <LabelInputContainer className="mb-4">
               <Label htmlFor="email">Email Address</Label>
               <Input
@@ -104,6 +135,27 @@ export default function ContactForm() {
                 <p className="text-red-500 text-sm">{emailError}</p>
               )}
             </LabelInputContainer>
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="firstname">First name</Label>
+              <Input
+                id="firstname"
+                placeholder="Tyler"
+                type="text"
+                ref={NameRef}
+              />
+              {nameError && <p className="text-red-500 text-sm">{nameError}</p>}
+            </LabelInputContainer>
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="firstname">First name</Label>
+              <Input
+                id="firstname"
+                placeholder="Tyler"
+                type="text"
+                ref={NameRef}
+              />
+              {nameError && <p className="text-red-500 text-sm">{nameError}</p>}
+            </LabelInputContainer>
+
             <LabelInputContainer className="mb-4">
               <Label htmlFor="text">Message</Label>
               <Input
