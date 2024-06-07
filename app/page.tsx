@@ -29,12 +29,15 @@ export default function Home() {
     <div className="antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02]">
       <HeroSection />
       <SponsorsSection />
-      <div className="pb-8 pt-8px-2 rounded-md flex md:items-center md:justify-center relative overflow-hidden">
-        <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
-          <MediaProvider />
-          <DefaultVideoLayout icons={defaultLayoutIcons} />
-        </MediaPlayer>
-      </div>
+      <section className="py-12 px-6 ">
+        <div className="max-w-5xl mx-auto">
+          <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
+            <MediaProvider />
+            <DefaultVideoLayout icons={defaultLayoutIcons} />
+          </MediaPlayer>
+        
+        </div>
+      </section>
       <div className="max-w-5xl mx-auto px-8">
         <HoverEffect items={projects} />
       </div>

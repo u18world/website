@@ -127,7 +127,8 @@ export const Navbar = () => {
       </div>
 
       {/* <!-- Desktop --> */}
-      <NavigationMenu className="hidden lg:block">
+       <div className="hidden lg:flex lg:w-full lg:justify-center">
+        <NavigationMenu className="flex justify-center">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-card text-base">
@@ -172,6 +173,7 @@ export const Navbar = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      </div>
 
       <div className="hidden lg:flex">
         <ThemeToggle />
