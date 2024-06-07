@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@devnomic/marquee": "^1.0.2",
-    "@hookform/resolvers": "^3.4.2",
+    "@hookform/resolvers": "^3.6.0",
     "@nextui-org/react": "^2.4.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-dialog": "^1.0.5",
