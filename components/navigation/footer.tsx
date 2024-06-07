@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { Section, Container } from "@/components/craft";
+import { Section, Container } from "@/components/ui/craft";
 import Balancer from "react-wrap-balancer";
 import {Icons} from "@/components/icons";
 import React from 'react'

@@ -10,12 +10,13 @@ import {
 import Meteors from "@/components/ui/meteors";
 import { Highlight } from "@/components/ui/hero-highlight";
 import NumberTicker from "@/components/ui/number-ticker";
-import { Spotlight } from "@/components/ui/spotlight";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { HeroSection } from "@/components/sections/hero";
+import { SponsorsSection } from "@/components/sections/sponsers";
 
 export default function Home() {
   const [screen, setScreenSize] = useState(1000);
@@ -25,88 +26,14 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <div className="relative pb-8 pt-4 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="orange"
-        />
-        <div className="max-w-[84rem] w-full mx-auto relative z-20">
-          <iframe
-            src="https://kushiaw.netlify.app/"
-            className="rounded-md w-full"
-            title="Game"
-            height={screen - 350}
-          />
-        </div>
-      </div>
-      <div className="relative pb-8 pt-8 overflow-hidden px-2 rounded-md flex md:items-center md:justify-center  antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
-        <div className="max-w-[84rem] w-full mx-auto  relative z-20">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 pb-16">
-            <div className="flex flex-col items-start xl:px-0 px-8">
-              <svg
-                width="236"
-                height="68"
-                viewBox="0 0 236 68"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.5 0.5H89C90.6569 0.5 92 1.84315 92 3.5V29C92 30.6569 93.3431 32 95 32H148.5C150.157 32 151.5 33.3431 151.5 35V64C151.5 65.6569 152.843 67 154.5 67H235.5"
-                  stroke="url(#paint0_linear)"
-                ></path>
-                <defs>
-                  <linearGradient
-                    id="paint0_linear"
-                    gradientUnits="userSpaceOnUse"
-                    x1="280"
-                    y1="0"
-                    x2="400.5"
-                    y2="50"
-                  >
-                    <stop stopColor="#2EB9DF" stopOpacity="0"></stop>
-                    <stop stopColor="#2EB9DF"></stop>
-                    <stop offset="1" stopColor="#9E00FF" stopOpacity="0"></stop>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <h1 className="text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
-                <span
-                  className="pb-16 tracking-tighter text-7xl m font-bold text-start bg-clip-text"
-                  data-brr="1"
-                >
-                  Welcome to the
-                </span>{" "}
-              </h1>
-              <h1 className="text-7xl font-bold mb-6 relative text-left dark:text-zinc-100 text-zinc-700 max-w-4xl">
-                <Highlight className=" tracking-tighter text-neutral-800 dark:text-white">
-                  Under 18 World
-                </Highlight>
-              </h1>
-              <h2 className="relative font-regular text-sm sm:text-xl text-zinc-500 tracking-wide mb-8 text-left max-w-2xl antialiased leading-loose __className_b15a0a">
-                Explore a new world created for under-18s in India, with its own
-                elected leaders, career opportunities, and superpowers.
-              </h2>
-              <div className="flex sm:flex-row flex-col space-y-2 justify-center sm:space-y-0 sm:space-x-4 sm:justify-start mb-4 w-full">
-                <Button className=" no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold px-4 py-2 w-full sm:w-52 h-14 rounded-2xl text-sm text-center items-center justify-center">
-                  Explore the World
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="w-full sm:w-52 text-sm  h-14 border border-transparent  dark:text-white dark:border-white flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
-                >
-                  Learn More
-                </Button>
-              </div>
-            </div>
-            <div>
-              <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
-                <MediaProvider />
-                <DefaultVideoLayout icons={defaultLayoutIcons} />
-              </MediaPlayer>
-            </div>
-          </div>
-        </div>
+    <div className="antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02]">
+      <HeroSection />
+      <SponsorsSection />
+      <div className="pb-8 pt-8px-2 rounded-md flex md:items-center md:justify-center relative overflow-hidden">
+        <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
+          <MediaProvider />
+          <DefaultVideoLayout icons={defaultLayoutIcons} />
+        </MediaPlayer>
       </div>
       <div className="max-w-5xl mx-auto px-8">
         <HoverEffect items={projects} />
@@ -325,7 +252,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
