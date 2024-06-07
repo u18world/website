@@ -29,6 +29,7 @@ const LoginPage = () => {
     await account.deleteSession("current");
     setLoggedInUser(null);
   };
+  console.log(loggedInUser);
 
   if (loggedInUser) {
     return (
