@@ -17,6 +17,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HeroSection } from "@/components/sections/hero";
 import { SponsorsSection } from "@/components/sections/sponsers";
+import { LoginButton } from "@/components/auth/login-button";
 
 export default function Home() {
   const [screen, setScreenSize] = useState(1000);
@@ -29,13 +30,17 @@ export default function Home() {
     <div className="antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02]">
       <HeroSection />
       <SponsorsSection />
+      <LoginButton asChild>
+        <Button variant="secondary" size="lg">
+          Sign in
+        </Button>
+      </LoginButton>
       <section className="py-12 px-6 ">
         <div className="max-w-5xl mx-auto">
           <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
             <MediaProvider />
             <DefaultVideoLayout icons={defaultLayoutIcons} />
           </MediaPlayer>
-        
         </div>
       </section>
       <div className="max-w-5xl mx-auto px-8">
