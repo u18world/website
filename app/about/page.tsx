@@ -1,10 +1,10 @@
 import { About } from "@/components/about/about";
 import { Team } from "@/components/about/team";
-import { FAQ } from '@/components/about/faq'
+import { FAQSection } from "@/components/about/faq";
 export default function Page() {
   return (
     <>
-      <div className="flex flex-col max-h-[100vh] pt-4">
+      <div className="flex flex-col max-h-[100vh] pt-12">
         <section className="mx-auto max-w-7xl relative w-full h-[50vh] border rounded-lg md:rounded-xl overflow-hidden">
           <img
             className="h-full not-prose w-full object-cover object-bottom filter blur-sm"
@@ -29,7 +29,7 @@ export default function Page() {
       </div>
       <About />
       <Team />
-      <FAQ />
+      <FAQSection />
     </>
   );
 }

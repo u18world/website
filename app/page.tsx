@@ -8,7 +8,6 @@ import {
   DefaultVideoLayout,
 } from "@vidstack/react/player/layouts/default";
 import Meteors from "@/components/ui/meteors";
-import { Highlight } from "@/components/ui/hero-highlight";
 import NumberTicker from "@/components/ui/number-ticker";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
@@ -36,11 +35,33 @@ export default function Home() {
         </Button>
       </LoginButton>
       <section className="py-12 px-6 ">
-        <div className="max-w-5xl mx-auto">
-          <MediaPlayer aspectRatio="16/9" src="youtube/BYhRZoPvNfs">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+          <MediaPlayer
+            aspectRatio="16/9"
+            src="youtube/BYhRZoPvNfs"
+            className="rounded-2xl"
+          >
             <MediaProvider />
             <DefaultVideoLayout icons={defaultLayoutIcons} />
           </MediaPlayer>
+          <div className="space-y-4">
+            <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
+              Under-18 Elections
+            </h2>
+            <p className="text-zinc-400">
+              Under-18 elections are a crucial part of the Under-18 World, with
+              an &apos;Under-18 World Cell&apos; in each school being the core
+              of the world&apos;s functionality within the school.
+            </p>
+            <div className="flex gap-4">
+              <Link href="#">
+                <Button className="">Discover Careers</Button>
+              </Link>
+              <Link href="#">
+                <Button variant="ghost">Discover Careers</Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
       <div className="max-w-5xl mx-auto px-8">
