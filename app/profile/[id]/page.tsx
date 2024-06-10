@@ -25,6 +25,15 @@ export default async function ProfileInfo({ params }: any) {
     },
   });
 
+  async function Update() {
+    await prisma.user.update({
+      where: { id: id },
+      data: {
+        score: 2,
+      },
+    });
+  }
+
   if(!user) {
     return (
         <div>
@@ -42,10 +51,13 @@ export default async function ProfileInfo({ params }: any) {
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-white/20 text-white rounded-full"></div>
                 <div>
-                  <h2 className="text-2xl font-bold text-white">{user?.name}</h2>
+                  <h2 className="text-2xl font-bold text-white">
+                    {user?.name}
+                  </h2>
                   <p className="text-white/80 text-sm">Under-18 Champion</p>
                 </div>
               </div>
+              <Button onClick={Update}>set score to 2</Button>
               <div className="flex items-center space-x-4">
                 <Badge className="bg-white/20 text-white" variant="secondary">
                   Score: {user?.score}
