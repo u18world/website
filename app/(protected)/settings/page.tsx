@@ -220,7 +220,6 @@ const SettingsPage = () => {
             <FormSuccess message={success} />
             <Button
               disabled={isPending}
-              type="submit"
             >
               Save
             </Button>
