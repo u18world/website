@@ -6,12 +6,13 @@
 export const publicRoutes = [
   "/",
   "/auth/new-verification",
-  "/superheros",
+  "/superheroes",
   "/leaders",
   "/elections",
   "/contact",
   "/careers",
   "/blog",
+  "/blog/intro",
   "/about",
 ];
 
