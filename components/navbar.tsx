@@ -47,15 +47,15 @@ const routeList: RouteProps[] = [
     label: "Careers",
   },
   {
-    href: "/superheros",
-    label: "Superheros",
+    href: "/superheroes",
+    label: "Superheroes",
   },
   {
     href: "/elections",
     label: "Elections",
   },
   {
-    href: "#contact",
+    href: "/contact",
     label: "Contact",
   },
   {
