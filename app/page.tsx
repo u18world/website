@@ -16,24 +16,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HeroSection } from "@/components/sections/hero";
 import { SponsorsSection } from "@/components/sections/sponsers";
-import { LoginButton } from "@/components/auth/login-button";
 
 export default function Home() {
-  const [screen, setScreenSize] = useState(1000);
-  useEffect(() => {
-    const size = window.screen.height;
-    setScreenSize(size);
-  }, []);
-
   return (
     <div className="antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02]">
       <HeroSection />
       <SponsorsSection />
-      <LoginButton asChild>
-        <Button variant="secondary" size="lg">
-          Sign in
-        </Button>
-      </LoginButton>
       <section className="py-12 px-6 ">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
           <MediaPlayer
