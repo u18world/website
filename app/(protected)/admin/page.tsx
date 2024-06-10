@@ -10,8 +10,13 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 const AdminPage = () => {
-  const [number,setNumber] = useState("")
+  const [number,setNumber] = useState<number | string>(0)
   const onServerActionClick = () => {
+    const parsedNumber = Number(number);
+    if (isNaN(parsedNumber)) {
+      toast.error("Please enter a valid number");
+      return;
+    }
     admin(number).then((data) => {
       if (data.error) {
         toast.error(data.error);
@@ -53,7 +58,7 @@ const AdminPage = () => {
           <input
             type="text"
             value={number}
-            onChange={(e) => setNumber(e.target.value)}
+            onChange={(e) => setNumber(e.target.value )}
           />
           <Button onClick={onServerActionClick}>Click to test</Button>
         </div>
