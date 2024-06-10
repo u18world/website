@@ -130,6 +130,11 @@ export const Navbar = () => {
             </div>
 
             <SheetFooter className="flex-col sm:flex-col justify-start items-start">
+              <LoginButton asChild>
+                <Button variant="secondary" size="lg">
+                  Sign in
+                </Button>
+              </LoginButton>
               <Separator className="mb-2" />
               <ThemeToggle />
             </SheetFooter>
@@ -184,20 +189,16 @@ export const Navbar = () => {
                 </NavigationMenuLink>
               ))}
             </NavigationMenuItem>
-            <NavigationMenuItem>
-                <NavigationMenuLink key={"login"} asChild>
-                  <LoginButton asChild>
-                    <Button variant="secondary" size="lg">
-                      Sign in
-                    </Button>
-                  </LoginButton>
-                </NavigationMenuLink>
-            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
 
       <div className="hidden lg:flex">
+        <LoginButton asChild>
+          <Button variant="secondary" size="lg">
+            Sign in
+          </Button>
+        </LoginButton>
         <ThemeToggle />
 
         <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
