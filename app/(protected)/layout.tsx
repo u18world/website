@@ -5,12 +5,12 @@ interface ProtectedLayoutProps {
 };
 
 const ProtectedLayout = ({ children }: ProtectedLayoutProps) => {
-  return ( 
-    <div className="h-full w-full flex flex-col gap-y-10 items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+  return (
+    <div className="pt-24 pb-24 flex items-center justify-center antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02] relative overflow-hidden">
       <Navbar />
       {children}
     </div>
-   );
+  );
 }
  
 export default ProtectedLayout;
