@@ -3,7 +3,17 @@
  * These routes do not require authentication
  * @type {string[]}
  */
-export const publicRoutes = ["/", "/auth/new-verification"];
+export const publicRoutes = [
+  "/",
+  "/auth/new-verification",
+  "/superheros",
+  "/leaders",
+  "/elections",
+  "/contact",
+  "/careers",
+  "/blog",
+  "/about",
+];
 
 /**
  * An array of routes that are used for authentication
