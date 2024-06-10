@@ -195,7 +195,7 @@ export const Navbar = () => {
 
       <div className="hidden lg:flex">
         <LoginButton asChild>
-          <Button variant="secondary" size="lg">
+          <Button size="lg">
             Sign in
           </Button>
         </LoginButton>
@@ -204,7 +204,7 @@ export const Navbar = () => {
         <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
           <Link
             aria-label="View on GitHub"
-            href="https://github.com/nobruf/shadcn-landing-page.git"
+            href="/"
             target="_blank"
           >
             <Github className="size-5" />
