@@ -12,7 +12,7 @@ export const admin = async ({number}:any) => {
     await prisma.user.update({
       where: { id: "clx8vj5mi0000m2i8z5ku2y3f" },
       data: {
-        score: number,
+        total_score: number,
       },
     });
     return { success: "Allowed Server Action!" };
