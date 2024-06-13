@@ -9,7 +9,7 @@ import {
 } from "@vidstack/react/player/layouts/default";
 import { HoverEffect } from "@/components/ui/party-hover-effect";
 import Link from "next/link";
-import { Tabs } from "@/components/ui/tabs";
+import { Tabs } from "@/components/sections/tabs";
 import { Button } from "@/components/ui/button";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 import { Badge } from "@/components/ui/badge";
@@ -28,29 +28,28 @@ const serviceList = [
 ];
 
 const parties = [
-    {
-      title: "Green Party - Focused on Sustainability",
-      description:
-        "Aims to take care of our environment, which is like our home. Will Implement measures to keep our home healthy and beautiful.",
-    },
-    {
-      title: "Future Party - Focused on technology",
-      description:
-        "Aims to take you on exciting journeys to explore your future. Will ensure that students would be prepared for the challenges of the future. Will invest more in STE(A)M  education and promote entrpreeurship.",
-    },
-    {
-      title: "People's Party - Equal educational pportunities for all",
-      description:
-        "Aims to make sure that everyone has fair and equal chance in life. Will ensure you the chance to learn, have good jobs, be treated fairly, and have support when you need it.",
-    },
-  ];
+  {
+    title: "Green Party - Focused on Sustainability",
+    description:
+      "Aims to take care of our environment, which is like our home. Will Implement measures to keep our home healthy and beautiful.",
+  },
+  {
+    title: "Future Party - Focused on technology",
+    description:
+      "Aims to take you on exciting journeys to explore your future. Will ensure that students would be prepared for the challenges of the future. Will invest more in STE(A)M  education and promote entrpreeurship.",
+  },
+  {
+    title: "People's Party - Equal educational pportunities for all",
+    description:
+      "Aims to make sure that everyone has fair and equal chance in life. Will ensure you the chance to learn, have good jobs, be treated fairly, and have support when you need it.",
+  },
+];
 
 export default function Elections() {
-  const imageUrl =
-    "/image1.png";
-  
-    const imageUrl2 = "/image2.png";
-  
+  const imageUrl = "/image1.png";
+
+  const imageUrl2 = "/image2.png";
+
   const tabs = [
     {
       title: "Parties",
@@ -149,20 +148,21 @@ export default function Elections() {
           <div className="max-w-5xl mx-auto px-16 grid grid-cols-1 md:grid-cols-2 mt-0">
             <div className="h-[30rem] relative flex items-center justify-center">
               <DirectionAwareHover imageUrl={imageUrl}>
-                <p className="font-normal text-sm">
+                <p className="font-normal text-md">
                   Take an active role in the Under-18 elections
-                  <br /> by participating in Under-18 clans, which serve as{" "}
-                  <br /> platforms for discussion, debate, and
+                  <br /> by participating in Under-18 clans, which
+                  <br /> serve as platforms for discussion, debate, and
                   <br /> collaboration among student voters.
                 </p>
               </DirectionAwareHover>
             </div>
             <div className="h-[30rem] relative flex items-center justify-center">
               <DirectionAwareHover imageUrl={imageUrl2}>
-                <p className="font-normal text-sm">
-                  You can assume roles such as robotics engineer, <br />
-                  anchors, reporters, or photographers, <br />
-                  leveraging your skills and interests to enhance <br />
+                <p className="font-normal text-md">
+                  You can assume roles such as robotics <br />
+                  engineer, anchors, reporters, or <br />
+                  photographers, leveraging your
+                  <br /> skills and interests to enhance <br />
                   the electoral experience for yourself
                   <br /> and other Under-18s.
                 </p>
@@ -176,9 +176,9 @@ export default function Elections() {
 
   return (
     <div className="pt-12">
-      <section className="mx-auto max-w-7xl relative w-full h-[50vh] border rounded-lg md:rounded-xl overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center py-12 px-6 ">
-          <div className="grid md:grid-cols-2 gap-8 p-2">
+      <section className="mx-auto max-w-7xl relative w-full h-[60vh] border rounded-lg md:rounded-xl overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center py-24 px-6 ">
+          <div className="grid md:grid-cols-2 gap-8 pt-4 pb-4">
             <MediaPlayer
               aspectRatio="16/9"
               src="youtube/BYhRZoPvNfs"
@@ -213,4 +213,5 @@ export default function Elections() {
       </div>
     </div>
   );
-}8
+}
+8;

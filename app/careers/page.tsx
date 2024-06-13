@@ -1,8 +1,4 @@
-export const metadata = {
-  title: "Careers",
-  description: "description",
-};
-
+import {ObjectSection} from '@/components/careers/objects'
 export default function Careers() {
-  return <div>Careers</div>;
+  return <ObjectSection/>;
 }
