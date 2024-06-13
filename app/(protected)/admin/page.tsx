@@ -17,7 +17,7 @@ const AdminPage = () => {
       toast.error("Please enter a valid number");
       return;
     }
-    admin(number).then((data) => {
+    admin().then((data) => {
       if (data.error) {
         toast.error(data.error);
       }
