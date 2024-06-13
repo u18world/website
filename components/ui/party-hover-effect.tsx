@@ -16,23 +16,18 @@ export const HoverEffect = ({
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div
-      className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
-        className
-      )}
-    >
+    <div className={cn("grid grid-cols-1 md:grid-cols-2 py-10", className)}>
       {items.map((item, idx) => (
         <div
           key={item?.title}
-          className="relative group  block p-2 h-full w-full"
+          className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-gradient-to-b to-[#fccf92] dark:to-[#cee6fa] dark:from-[#add8e6] from-[#f5893f] block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-gradient-to-b dark:to-[#fccf92] to-[#cee6fa] from-[#add8e6] dark:from-[#f5893f] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
