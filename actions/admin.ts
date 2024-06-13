@@ -10,7 +10,7 @@ export const admin = async ({number}:any) => {
 
   if (role === UserRole.ADMIN) {
     await prisma.user.update({
-      where: { id: "clx8vj5mi0000m2i8z5ku2y3f" },
+      where: { id: "clxcyviqm0000ysaa7inicp57" },
       data: {
         total_score: number,
       },
