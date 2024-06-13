@@ -31,7 +31,7 @@
     "@radix-ui/react-tabs": "^1.0.4",
     "@radix-ui/react-toast": "^1.1.5",
     "@tanstack/react-query": "^5.40.1",
-    "@vidstack/react": "^1.11.21",
+    "@vidstack/react": "^1.11.22",
     "appwrite": "^15.0.0",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.0",
