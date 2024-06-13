@@ -14,12 +14,14 @@ export const HeroSection = () => {
     <section className="container w-full">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
         <div className="text-center space-y-8">
-          <Badge variant="outline" className="border-foreground text-sm py-2">
-            <span className="mr-2 text-primary">
-              <Badge>New</Badge>
-            </span>
-            <span> idk is out now! </span>
-          </Badge>
+          <Link href="/elections">
+            <Badge variant="outline" className="border-foreground text-sm py-2">
+              <span className="mr-2 text-primary">
+                <Badge>New</Badge>
+              </span>
+              <span> Under 18 Assembly </span>
+            </Badge>
+          </Link>
 
           <div className="max-w-screen-md mx-auto text-center text-7xl font-bold">
             <h1>
@@ -47,10 +49,7 @@ export const HeroSection = () => {
               variant="secondary"
               className="w-5/6 md:w-1/4 font-bold"
             >
-              <Link
-                href="/"
-                target="_blank"
-              >
+              <Link href="/" target="_blank">
                 Learn More
               </Link>
             </Button>

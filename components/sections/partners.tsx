@@ -4,52 +4,63 @@ import { Icon } from "@/components/icon";
 import { Marquee } from "@devnomic/marquee";
 import "@devnomic/marquee/dist/index.css";
 import { icons } from "lucide-react";
-interface sponsorsProps {
+
+interface partnersProps {
   icon: string;
   name: string;
 }
 
-const sponsors: sponsorsProps[] = [
+const partners: partnersProps[] = [
   {
-    icon: "Crown",
-    name: "Acmebrand",
+    icon: "BadgeIndianRupee",
+    name: "Zerodha Varsity",
   },
   {
-    icon: "Vegan",
-    name: "Acmelogo",
+    icon: "Clapperboard",
+    name: "Arka Media Works",
   },
   {
-    icon: "Ghost",
-    name: "Acmesponsor",
+    icon: "Rabbit",
+    name: "WhatIsMyGoal",
   },
   {
-    icon: "Puzzle",
-    name: "Acmeipsum",
+    icon: "Globe",
+    name: "Mana Yatri",
   },
   {
-    icon: "Squirrel",
-    name: "Acme",
+    icon: "Hospital",
+    name: "Rainbow Hospital",
   },
   {
-    icon: "Cookie",
-    name: "Accmee",
+    icon: "Cpu",
+    name: "Soshin Tech",
+  },
+
+  {
+    icon: "Gavel",
+    name: "Umashankar and Associates",
+  },
+
+  {
+    icon: "Car",
+    name: "ZF",
   },
   {
-    icon: "Drama",
-    name: "Acmetech",
+    icon: "WalletCards",
+    name: "Zeni5",
   },
 ];
 
-export const SponsorsSection = () => {
+export const PartnersSection = () => {
   return (
     <section id="sponsors" className="max-w-[75%] mx-auto pb-24 sm:pb-32">
       <h2 className="text-lg md:text-xl text-center mb-6">
-        Our Platinum Sponsors
+        Our Partners
       </h2>
 
       <div className="mx-auto">
         <Marquee className="gap-[3rem]" fade innerClassName="gap-[3rem]">
-          {sponsors.map(({ icon, name }) => (
+          {partners.map(({ icon, name }) => (
             <div
               key={name}
               className="flex items-center text-xl md:text-2xl font-medium"

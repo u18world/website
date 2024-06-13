@@ -15,13 +15,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HeroSection } from "@/components/sections/hero";
-import { SponsorsSection } from "@/components/sections/sponsers";
+import { PartnersSection } from "@/components/sections/partners";
 
 export default function Home() {
   return (
     <div className="antialiased dark:bg-grid-white/[0.02] bg-grid-black/[0.02]">
       <HeroSection />
-      <SponsorsSection />
+      <PartnersSection />
       <section className="py-12 px-6 ">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
           <MediaPlayer
