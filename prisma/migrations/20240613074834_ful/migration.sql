@@ -1,11 +1,28 @@
 -- CreateEnum
 CREATE TYPE "UserRole" AS ENUM ('ADMIN', 'USER');
 
+-- CreateEnum
+CREATE TYPE "CarrerInrests" AS ENUM ('Medicine', 'Finance', 'Business_and_entrepreneurship', 'Movie_making', 'Psychology', 'Information_technology', 'Mechanical_engineering', 'Architecture_and_interior_designing', 'AI_and_machine_learning', 'Automobile_engineering', 'Space_science_and_astrophysics', 'Hospitality', 'Physics_chemistry_Biology', 'Academics_and_education', 'Research', 'Mathematics', 'Emergency_services', 'Media_and_journalism', 'Marketing', 'Government_and_public_services', 'Defence_and_military', 'Homemaker', 'Agriculture', 'Sports', 'Wellness', 'Others');
+
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
     "name" TEXT,
     "email" TEXT,
+    "total_score" INTEGER DEFAULT 0,
+    "skill_score" INTEGER DEFAULT 0,
+    "carrer_score" INTEGER DEFAULT 0,
+    "academic_score" INTEGER DEFAULT 0,
+    "achievements_score" INTEGER DEFAULT 0,
+    "phone" INTEGER,
+    "city" TEXT DEFAULT '',
+    "parent_name" TEXT DEFAULT '',
+    "parent_email" TEXT DEFAULT '',
+    "carrer_intrest_1" "CarrerInrests" NOT NULL DEFAULT 'Others',
+    "carrer_intrest_2" "CarrerInrests" NOT NULL DEFAULT 'Others',
+    "hooby" TEXT,
+    "academic_improve_details" TEXT,
+    "achievements_details" TEXT,
     "emailVerified" TIMESTAMP(3),
     "image" TEXT,
     "password" TEXT,

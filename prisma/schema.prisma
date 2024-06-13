@@ -14,18 +14,60 @@ enum UserRole {
   USER
 }
 
+enum CarrerInrests {
+  Medicine
+  Finance
+  Business_and_entrepreneurship
+  Movie_making
+  Psychology
+  Information_technology
+  Mechanical_engineering
+  Architecture_and_interior_designing
+  AI_and_machine_learning
+  Automobile_engineering
+  Space_science_and_astrophysics
+  Hospitality
+  Physics_chemistry_Biology
+  Academics_and_education
+  Research
+  Mathematics
+  Emergency_services
+  Media_and_journalism
+  Marketing
+  Government_and_public_services
+  Defence_and_military
+  Homemaker
+  Agriculture
+  Sports
+  Wellness
+  Others
+}
+
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  score         Int?   @default(1)
-  emailVerified DateTime?
-  image         String?
-  password      String?
-  role          UserRole @default(USER)
-  accounts      Account[]
-  isTwoFactorEnabled Boolean @default(false)
-  twoFactorConfirmation TwoFactorConfirmation?
+  id                        String                    @id @default(cuid())
+  name                      String?
+  email                     String?                   @unique
+  total_score               Int?                      @default(0)
+  skill_score               Int?                      @default(0)
+  carrer_score              Int?                      @default(0)
+  academic_score            Int?                      @default(0)
+  achievements_score        Int?                      @default(0)
+  phone                     Int?      
+  city                      String?                   @default("")
+  parent_name               String?                   @default("")
+  parent_email              String?                   @default("")
+  carrer_intrest_1          CarrerInrests             @default(Others) 
+  carrer_intrest_2          CarrerInrests             @default(Others)
+  hooby                     String?
+  academic_improve_details  String?
+  achievements_details      String?
+  emailVerified             DateTime?
+  image                     String?
+  password                  String?
+  role                      UserRole                  @default(USER)
+  accounts                  Account[]
+  isTwoFactorEnabled        Boolean                   @default(false)
+  twoFactorConfirmation     TwoFactorConfirmation?
 }
 
 model Account {
