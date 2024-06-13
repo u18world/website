@@ -51,7 +51,7 @@ export default async function ProfileInfo({ params }: any) {
               </div>
               <div className="flex items-center space-x-4">
                 <Badge className="bg-white/20 text-white" variant="secondary">
-                  Score: {user?.score}
+                  Score: {user?.total_score}
                 </Badge>
                 <Badge className="bg-white/20 text-white" variant="secondary">
                   {user?.role}
