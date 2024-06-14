@@ -1,6 +1,7 @@
 "use client";
-import { Earth, Github, Menu } from "lucide-react";
+import { Github, Menu, ChevronsDown } from "lucide-react";
 import React from "react";
+import Image from 'next/image'
 import {
   Sheet,
   SheetContent,
@@ -21,16 +22,11 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { LoginButton } from "@/components/auth/login-button";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ToggleTheme } from "@/components/toggle-theme";
 
 interface RouteProps {
   href: string;
   label: string;
-}
-
-interface FeatureProps {
-  title: string;
-  description: string;
 }
 
 const routeList: RouteProps[] = [
@@ -58,37 +54,21 @@ const routeList: RouteProps[] = [
     href: "/contact",
     label: "Contact",
   },
-  {
-    href: "/leaders",
-    label: "Leaders",
-  },
-];
-
-const featureList: FeatureProps[] = [
-  {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
-  },
-  {
-    title: "Build Trust",
-    description:
-      "Leverages social proof elements to establish trust and credibility.",
-  },
-  {
-    title: "Capture Leads",
-    description:
-      "Make your lead capture form visually appealing and strategically.",
-  },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  // box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
-        <Earth className="w-9 h-9 mr-2" />
-        Under18
+        <Image
+          src="/logo.png"
+          alt="logo"
+          height={36}
+          width={36}
+          className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
+        />
+        Under 18 World
       </Link>
       {/* <!-- Mobile --> */}
       <div className="flex items-center lg:hidden">
@@ -108,8 +88,8 @@ export const Navbar = () => {
               <SheetHeader className="mb-4 ml-4">
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
-                    <Earth className="w-9 h-9 mr-2" />
-                    Under18
+                    <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
+                    Shadcn
                   </Link>
                 </SheetTitle>
               </SheetHeader>
@@ -131,73 +111,38 @@ export const Navbar = () => {
 
             <SheetFooter className="flex-col sm:flex-col justify-start items-start">
               <LoginButton asChild>
-                <Button variant="secondary" size="lg">
+                <Button variant="secondary" size="sm">
                   Sign in
                 </Button>
               </LoginButton>
-              <Separator className="mb-2 mt-2" />
-              <ThemeToggle />
+              <Separator className="mb-2" />
+
+              <ToggleTheme />
             </SheetFooter>
           </SheetContent>
         </Sheet>
       </div>
 
       {/* <!-- Desktop --> */}
-      <div className="hidden lg:flex lg:w-full lg:justify-center">
-        <NavigationMenu className="flex justify-center">
-          <NavigationMenuList>
-            {/** 
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-card text-base">
-                Features
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
-                  <Image
-                    src=""
-                    alt="RadixLogo"
-                    className="h-full w-full rounded-md object-cover"
-                    width={600}
-                    height={600}
-                  />
-                  <ul className="flex flex-col gap-2">
-                    {featureList.map(({ title, description }) => (
-                      <li
-                        key={title}
-                        className="rounded-md p-3 text-sm hover:bg-muted"
-                      >
-                        <p className="mb-1 font-semibold leading-none text-foreground">
-                          {title}
-                        </p>
-                        <p className="line-clamp-2 text-muted-foreground">
-                          {description}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            */}
-
-            <NavigationMenuItem>
-              {routeList.map(({ href, label }) => (
-                <NavigationMenuLink key={href} asChild>
-                  <Link href={href} className="justify-start text-base px-2">
-                    {label}
-                  </Link>
-                </NavigationMenuLink>
-              ))}
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
+      <NavigationMenu className="hidden lg:block mx-auto">
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            {routeList.map(({ href, label }) => (
+              <NavigationMenuLink key={href} asChild>
+                <Link href={href} className="text-base px-2">
+                  {label}
+                </Link>
+              </NavigationMenuLink>
+            ))}
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
 
       <div className="hidden lg:flex">
         <LoginButton asChild>
-          <Button size="lg">Sign in</Button>
+          <Button size="sm">Sign in</Button>
         </LoginButton>
-        <ThemeToggle />
+        <ToggleTheme />
 
         <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
           <Link aria-label="View on GitHub" href="/" target="_blank">
