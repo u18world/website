@@ -1,5 +1,13 @@
 import { Icons } from "@/components/icons";
 
+export interface blogProps {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
 export interface carrerProps {
   id: number;
   image: string;

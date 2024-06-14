@@ -12,7 +12,7 @@ export const Hero = () => {
           <h1>
             About the
             <br />
-            <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+            <span className="text-transparent px-2 bg-gradient-to-r from-orange-300 to-primary bg-clip-text">
               Under 18 {""}
             </span>
             World

@@ -6,7 +6,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function TracingBeamDemo() {
   return (
-    <TracingBeam className="h-full">
+    <TracingBeam className="max-h-[400rem] mt-16 mt-16">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
             <div key={`content-${index}`} className="mb-10">

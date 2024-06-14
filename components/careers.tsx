@@ -2,21 +2,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { career_object } from "@/config/carrers";
 
-export const ObjectSection = () => {
+export const CarrerSection = () => {
   return (
     <section id="carrer" className="container text-center py-12 sm:py-24">
-      <h2 className="text-3xl md:text-4xl font-bold">
-        Our{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Carrer{" "}
-        </span>
-        options
-      </h2>
-      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
-      </p>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {career_object.map((prod) => (
           <div
