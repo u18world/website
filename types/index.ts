@@ -4,9 +4,9 @@ export interface carrerProps {
   id: number;
   image: string;
   title: string;
-  stock: boolean;
   description: string;
-  href: string;
+  read_more: string;
+  enroll_now: string;
 }
 
 export interface FeatureProps {

@@ -1,26 +1,10 @@
-"use client";
 import Link from "next/link";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { carrerProps } from "@/types";
 import { career_object } from "@/config/carrers";
 
 export const ObjectSection = () => {
-  const [selectedProduct, setSelectedProduct] = useState<carrerProps | null>(
-    null
-  );
-
-  const handleProductClick = (product: carrerProps) => {
-    setSelectedProduct(product);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProduct(null);
-  };
-
   return (
-    <section id="howItWorks" className="container text-center py-12 sm:py-24">
+    <section id="carrer" className="container text-center py-12 sm:py-24">
       <h2 className="text-3xl md:text-4xl font-bold">
         Our{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
@@ -33,12 +17,11 @@ export const ObjectSection = () => {
         dolor pariatur sit!
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {career_object.map((prod) => (
           <div
             key={prod.id}
             className="bg-muted/50 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"
-            onClick={() => handleProductClick(prod)}
           >
             <div className="rounded-lg overflow-hidden p-4 aspect-w-1 aspect-h-1 group-hover:opacity-75">
               <img
@@ -56,47 +39,18 @@ export const ObjectSection = () => {
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-gray-900 dark:text-gray-50 font-bold">
-                  {prod.price}
+                  <Link href={prod.read_more}>
+                    <Button size="sm">Read More</Button>
+                  </Link>
                 </span>
-                <Button disabled={!prod.stock} size="sm">
-                  {prod.stock ? "In Stock" : "Out of Stock"}
-                </Button>
+                <Link href={prod.enroll_now}>
+                  <Button size="sm">Enroll Now</Button>
+                </Link>
               </div>
             </div>
           </div>
         ))}
       </div>
-      {selectedProduct && (
-        <Dialog open onOpenChange={handleCloseModal}>
-          <DialogContent className="max-w-[600px] w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <img
-                src={selectedProduct.image}
-                alt={selectedProduct.title}
-                width={600}
-                height={450}
-                className="w-full h-auto object-cover rounded-lg"
-              />
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">{selectedProduct.title}</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  {selectedProduct.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-900 dark:text-gray-50 font-bold text-2xl">
-                    ${selectedProduct.price}
-                  </span>{" "}
-                  <Link href="/contact">
-                    <Button disabled={!selectedProduct.stock} size="lg">
-                      {selectedProduct.stock ? "Contact" : "Out of Stock"}
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
-      )}
     </section>
   );
 };
