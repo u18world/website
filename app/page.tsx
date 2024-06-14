@@ -35,16 +35,24 @@ export default function Home() {
               Under-18 Elections
             </h2>
             <p className="text-zinc-400">
-              Under-18 elections are a crucial part of the Under-18 World, with
-              an &apos;Under-18 World Cell&apos; in each school being the core
-              of the world&apos;s functionality within the school.
+              The Under-18 world is unique, where students explore careers,
+              develop skills, and enjoy edutainment. We need leaders in this
+              world and should see politics as a viable career. The Under-18
+              elections today will shape the politicians and voters of tomorrow,
+              preparing them to be politically aware citizens for India&apos;s
+              future.
             </p>
             <div className="flex gap-4">
-              <Link href="#">
-                <Button className="">Discover Careers</Button>
-              </Link>
-              <Link href="#">
-                <Button variant="ghost">Discover Careers</Button>
+              <Button asChild>
+                <Link
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScqt2ZRUqXmWKMUSA8HMmZKcDXOoc_wbLD-s8R1WMfTssSS0w/viewform"
+                  target="_blank"
+                >
+                  Register your School
+                </Link>
+              </Button>
+              <Link href="/elections">
+                <Button variant="ghost">Learn More</Button>
               </Link>
             </div>
           </div>
@@ -61,6 +69,28 @@ export default function Home() {
                 Latest Updates
               </h2>
               <div className="mt-4 space-y-4">
+                <Link href="#">
+                  <div className="mt-4 relative flex items-center justify-center overflow-hidden rounded-lg border bg-background p-6 md:shadow-x">
+                    <img
+                      alt="Update"
+                      className="rounded-lg mr-4 shadow-lg"
+                      height={80}
+                      src="https://generated.vusercontent.net/placeholder.svg"
+                      style={{
+                        aspectRatio: "80/80",
+                        objectFit: "cover",
+                      }}
+                      width={80}
+                    />
+                    <div>
+                      <h3 className="text-lg font-bold">Under-18 Assembly Training Session</h3>
+                      <p className="text-zinc-400  mt-1">
+                        The Under-18 World is holding its biennial elections,
+                        with candidates campaigning across the country.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
                 <Link href="#">
                   <div className="mt-4 relative flex items-center justify-center overflow-hidden rounded-lg border bg-background p-6 md:shadow-x">
                     <Image
@@ -81,28 +111,6 @@ export default function Home() {
                       <p className="text-zinc-400 mt-1">
                         The Under-18 World has a new superhero with the power of
                         invisibility.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-                <Link href="#">
-                  <div className="mt-4 relative flex items-center justify-center overflow-hidden rounded-lg border bg-background p-6 md:shadow-x">
-                    <img
-                      alt="Update"
-                      className="rounded-lg mr-4 shadow-lg"
-                      height={80}
-                      src="https://generated.vusercontent.net/placeholder.svg"
-                      style={{
-                        aspectRatio: "80/80",
-                        objectFit: "cover",
-                      }}
-                      width={80}
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold">Elections Underway</h3>
-                      <p className="text-zinc-400  mt-1">
-                        The Under-18 World is holding its biennial elections,
-                        with candidates campaigning across the country.
                       </p>
                     </div>
                   </div>

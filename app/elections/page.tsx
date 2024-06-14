@@ -1,4 +1,7 @@
 "use client";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Icon } from "@/components/icon";
+import { icons } from "lucide-react";
 import "@vidstack/react/player/styles/default/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
 
@@ -27,6 +30,39 @@ const serviceList = [
   },
 ];
 
+interface BenefitsProps {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const benefitList: BenefitsProps[] = [
+  {
+    icon: "Blocks",
+    title: "Election officers selection",
+    description:
+      "School selects two active students from class 6, 7, 8, 9 and 11 to take the role of election officers on the basis of under-18 service commission exam.",
+  },
+  {
+    icon: "LineChart",
+    title: "MLA eligibility and nomination",
+    description:
+      "Students willing to nominate should garner the support of 100 individuals, can nominate to one of the three parties by submitting details to the election officers.",
+  },
+  {
+    icon: "Wallet",
+    title: "Candidate finalisation for each of the parties ",
+    description:
+      "Party A - 30 nominations, Party B - 47 nominations, Party C -24 nominations. Based on popularity & internal voting, one candidate will be decided per party.",
+  },
+  {
+    icon: "Sparkle",
+    title: "The Elections",
+    description:
+      "Voters vote for one of the three parties. Highest votes would decide the  winner. ",
+  },
+];
+
 const parties = [
   {
     title: "Green Party - Focused on Sustainability",
@@ -45,22 +81,50 @@ const parties = [
   },
 ];
 
-export default function Elections() {
-  const imageUrl = "/image1.png";
 
-  const imageUrl2 = "/image2.png";
+const world_cell = [
+  {
+    title: "Legislative Execution",
+    description:
+      "The Under-18 World Cell will be the base location for Under 18 MLA and IAS officers (now election officers) to execute proposed bills.",
+  },
+  {
+    title: "Under-18 World Engagement",
+    description:
+      "Under 18 clans and their leaders will utilize the Under-18 World Cell as the primary location for engaging with Under 18 citizens.",
+  },
+  {
+    title: "Under-18 Clans",
+    description:
+      "Selection of leaders for  writers, photography and designers clans. Activating the clans during the Under-18 elections",
+  },
+];
+
+export default function Elections() {
 
   const tabs = [
     {
       title: "Parties",
       value: "parties",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold dark:text-background text-white bg-gradient-to-br to-[#fccf92] dark:to-[#cee6fa] dark:from-[#add8e6] from-[#f5893f]">
-          <h2 className="text-3xl md:text-4xl text-background text-center font-bold mb-2">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold text-foreground bg-background">
+          <h2 className="text-3xl md:text-4xl text-foreground text-center font-bold mb-2">
             Three U-18 Parties in the Under-18 World
           </h2>
           <div className="max-w-5xl mx-auto px-8">
             <HoverEffect items={parties} className="lg:grid-cols-3" />
+          </div>
+          <div className="space-y-4 md:space-y-0 md:space-x-4 justify-center flex items-center">
+            <Link href="https://drive.google.com/file/d/1zYXwaS3wCPOgfMqla-k6--W5mUe6Glpp/view">
+              <Button className="font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
+                Form 2B U-18 MLA nomination
+              </Button>
+            </Link>
+            <Link href="htps://forms.gle/1jbDiz6GDiE19gm26">
+              <Button className="font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
+                Form 2B Submission
+              </Button>
+            </Link>
           </div>
         </div>
       ),
@@ -69,11 +133,11 @@ export default function Elections() {
       title: "Constituencies",
       value: "constituencies",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold dark:text-background text-white bg-gradient-to-br to-[#fccf92] dark:to-[#cee6fa] dark:from-[#add8e6] from-[#f5893f]">
-          <h2 className="text-3xl md:text-4xl text-background text-center font-bold mb-2">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-foreground bg-background">
+          <h2 className="text-3xl md:text-4xl text-foreground text-center font-bold mb-2">
             School Constituencies
           </h2>
-          <h3 className="p-4 text-md text-center mb-2">
+          <h3 className="p-4 text-zinc-40 text-center mb-2 ">
             This election is similar to Assembly elections.
             <br /> Each school branch is a constituency.
             <br /> One Under-18 MLA per constituency is elected to represent the
@@ -81,6 +145,51 @@ export default function Elections() {
             <br /> Schools with more than 2,500 students will be considered as 2
             constituencies.
           </h3>
+          <div className="w-full max-w-5xl mx-auto p-6 md:p-8">
+            <div className="shadow rounded-lg overflow-hidden">
+              <div className="p-6 md:p-8">
+                <div className="flex flex-col gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="p-4 rounded-lg">
+                      <h3 className="text-lg font-semibold mb-2">
+                        Legislative
+                      </h3>
+                      <div className="flex flex-col gap-2">
+                        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+                          <h4 className="text-base font-semibold mb-2">
+                            CM <br />+ The Team
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 rounded-lg">
+                      <h3 className="text-lg font-semibold mb-2">Executive</h3>
+                      <div className="flex flex-col gap-2">
+                        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+                          <h4 className="text-base font-semibold mb-1">
+                            10 IAS Officers
+                            <br /> + 6 Clan Lead
+                          </h4>
+                          <div className="flex flex-col gap-2"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 rounded-lg">
+                      <h3 className="text-lg font-semibold mb-2">Judiciary</h3>
+                      <div className="flex flex-col gap-2">
+                        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+                          <h4 className="text-base font-semibold mb-1">
+                            Principal <br />+ 2 School coordinators <br />+
+                            Parents
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       ),
     },
@@ -88,17 +197,64 @@ export default function Elections() {
       title: "Under-18 Assembly",
       value: "assembly",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold dark:text-background text-white bg-gradient-to-br to-[#fccf92] dark:to-[#cee6fa] dark:from-[#add8e6] from-[#f5893f]">
-          <h2 className="text-3xl md:text-4xl text-background text-center font-bold mb-2">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-foreground bg-background">
+          <h2 className="text-3xl md:text-4xl text-foreground text-center font-bold mb-2">
             Under-18 Assembly
           </h2>
-          <h3 className="p-4 text-md text-center mb-2">
+          <h3 className="p-4 text-zinc-40 text-center mb-2 ">
             Elected Under-18 MLAs will participate in the Under-18 Assembly to
             draft and pass actionable bills.
             <br />
             Majority will be implemented by WhatIsMyGoal and larger bills will
             be presented to the government as recommendations.
           </h3>
+          <div className="w-full max-w-4xl mx-auto py-12 md:py-16 lg:py-20">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+              <div className="relative">
+                <div className="bg-[#f1c40f] rounded-2xl p-6 shadow-lg transform rotate-[5deg]">
+                  <p className="text-gray-800 font-medium">
+                    75% majority to pass a bill
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="bg-[#2980b9] rounded-2xl p-6 shadow-lg transform -rotate-[10deg]">
+                  <p className="text-white font-medium">
+                    3/4 th of bills will be initiated by elected leaders
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="bg-[#e74c3c] rounded-2xl p-6 shadow-lg transform rotate-[8deg]">
+                  <p className="text-white font-medium">
+                    1/4th of bills initiated by brands/partners through WMG
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="bg-[#8e44ad] rounded-2xl p-6 shadow-lg transform -rotate-[7deg]">
+                  <p className="text-white font-medium">
+                    Special powers with the superheroes and The Team
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="bg-[#16a085] rounded-2xl p-6 shadow-lg transform rotate-[12deg]">
+                  <p className="text-white font-medium">
+                    Full veto power of THE King!
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="bg-[#27ae60] rounded-2xl p-6 shadow-lg transform -rotate-[5deg]">
+                  <p className="text-white font-medium">20 bills for 2 years</p>
+                  <p className="text-white font-medium">
+                    4 day assembly sessions
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       ),
     },
@@ -106,17 +262,21 @@ export default function Elections() {
       title: "Election Officers",
       value: "officers",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold dark:text-background text-white bg-gradient-to-br to-[#fccf92] dark:to-[#cee6fa] dark:from-[#add8e6] from-[#f5893f]">
-          <h2 className="text-3xl md:text-4xl text-background text-center font-bold mb-2">
-            Election Officers
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-foreground bg-background">
+          <h2 className="text-3xl md:text-4xl text-foreground text-center font-bold mb-2">
+            Election Officers (IAS)
           </h2>
-          <h3 className="p-4 text-md text-center mb-2">
+          <h3 className="p-4 text-zinc-40 text-center mb-2 ">
             10 students from each school from class 6, 7, 8, 9 and 11 are
             selected to be the election officers who conduct the elections &
             later take the role of IAS officers in the school constituency.
-            <br />
-            They head the Under-18 World Cell of the school.
           </h3>
+          <h2 className="text-2xl md:text-2xl text-foreground text-center font-bold mt-4 mb-2">
+            Under-18 Election Officers are the Chiefs of the Under-18 World Cell
+          </h2>
+          <div className="max-w-5xl mx-auto px-8">
+            <HoverEffect items={world_cell} className="lg:grid-cols-3" />
+          </div>
         </div>
       ),
     },
@@ -124,50 +284,33 @@ export default function Elections() {
       title: "Voters",
       value: "voters",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold dark:text-background text-white bg-gradient-to-br to-[#fccf92] dark:to-[#cee6fa] dark:from-[#add8e6] from-[#f5893f]">
-          <h2 className="text-3xl md:text-4xl text-background text-center font-bold mb-2">
-            Voters
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-foreground bg-background">
+          <h2 className="text-3xl md:text-4xl text-foreground text-center font-bold mb-2">
+            Voters (Electors)
           </h2>
-          <h3 className="p-4 text-md text-center mb-2">
+          <h3 className="p-4 text-zinc-40 text-center mb-2">
             Students from Grade 4 and above vote for their Under-18 MLA
             candidate from the school, who will represent them in the Under-18
             Assembly.
           </h3>
-          <h2 className="text-2xl md:text-2xl text-background text-center font-bold mb-2">
+
+          <h2 className="text-2xl md:text-2xl text-foreground text-center font-bold mb-2">
             Selecting the right candidate in the under-18 elections
           </h2>
           <div className="max-w-5xl mx-auto px-16">
             <HoverEffect items={serviceList} />
           </div>
-          <h2 className="text-2xl md:text-2xl text-background text-center font-bold mb-0">
-            Engage in the under-18 elections through the Under-18 clans
-          </h2>
-          <div className="text-center items-center justify-center flex flex-col">
-            <Badge>Hint: Hover over the images..</Badge>
-          </div>
-          <div className="max-w-5xl mx-auto px-16 grid grid-cols-1 md:grid-cols-2 mt-0">
-            <div className="h-[30rem] relative flex items-center justify-center">
-              <DirectionAwareHover imageUrl={imageUrl}>
-                <p className="font-normal text-md">
-                  Take an active role in the Under-18 elections
-                  <br /> by participating in Under-18 clans, which
-                  <br /> serve as platforms for discussion, debate, and
-                  <br /> collaboration among student voters.
-                </p>
-              </DirectionAwareHover>
-            </div>
-            <div className="h-[30rem] relative flex items-center justify-center">
-              <DirectionAwareHover imageUrl={imageUrl2}>
-                <p className="font-normal text-md">
-                  You can assume roles such as robotics <br />
-                  engineer, anchors, reporters, or <br />
-                  photographers, leveraging your
-                  <br /> skills and interests to enhance <br />
-                  the electoral experience for yourself
-                  <br /> and other Under-18s.
-                </p>
-              </DirectionAwareHover>
-            </div>
+          <div className="space-y-4 md:space-y-0 md:space-x-4 justify-center flex items-center">
+            <Link href="https://drive.google.com/file/d/1JUyWLzWlN5exoK8uBFE7FO6Uvp7ncUam/view">
+              <Button className="font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
+                Form 6 U-18 Voter Registration
+              </Button>
+            </Link>
+            <Link href="https://forms.gle/TYAvHYtvuyDavpBf6">
+              <Button className="font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
+                Form 6 Submission
+              </Button>
+            </Link>
           </div>
         </div>
       ),
@@ -176,7 +319,7 @@ export default function Elections() {
 
   return (
     <div className="pt-12">
-      <section className="mx-auto max-w-7xl relative w-full h-[60vh] border rounded-lg md:rounded-xl overflow-hidden">
+      <section className="mx-auto max-w-7xl relative w-full h-[60vh] rounded-lg md:rounded-xl overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center py-24 px-6 ">
           <div className="grid md:grid-cols-2 gap-8 pt-4 pb-4">
             <MediaPlayer
@@ -197,70 +340,67 @@ export default function Elections() {
                 core of the world&apos;s functionality within the school.
               </p>
               <div className="flex gap-4">
-                <Link href="#">
-                  <Button className="">Discover Careers</Button>
-                </Link>
-                <Link href="#">
-                  <Button variant="ghost">Discover Careers</Button>
-                </Link>
+                <Button asChild>
+                  <Link
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScqt2ZRUqXmWKMUSA8HMmZKcDXOoc_wbLD-s8R1WMfTssSS0w/viewform"
+                    target="_blank"
+                  >
+                    Register your School
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <div className="h-[100rem] md:h-[80rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mb-40 mt-20">
-        <Tabs tabs={tabs} />
+      <div className="h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mb-40 mt-20">
+        <Tabs
+          tabs={tabs}
+        />
       </div>
-      <div className="w-full max-w-4xl mx-auto py-12 md:py-24 lg:py-32 flex justify-center">
-        <div className="space-y-8 flex">
-          <div className="space-y-4 mr-12">
-            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm font-medium dark:bg-gray-800">
-              2019
-            </div>
-            <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Your Activities in 2019</h3>
-            <p className="text-gray-500 dark:text-gray-400">
-              In 2019, you were busy exploring new hobbies and trying to find your passion. You spent a lot of time
-              reading, hiking, and experimenting with different creative projects.
+      <section id="benefits" className="container py-24 sm:py-32">
+        <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Under-18 Elections Roadmap
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+              ducimus reprehenderit architecto rerum similique facere odit
+              deleniti necessitatibus quo quae.
             </p>
           </div>
-          <div className=" w-[2px] bg-gray-200 dark:bg-gray-700 animate-[lineGradient_5s_ease-in-out_infinite]" />
-          <div className="pt-32 space-y-4 ml-12 animate-[slideDown_0.5s_ease-in-out]">
-            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm font-medium dark:bg-gray-800">
-              2020
-            </div>
-            <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Your Activities in 2020</h3>
-            <p className="text-gray-500 dark:text-gray-400">
-              In 2020, you focused on personal growth and self-improvement. You started a meditation practice, learned a
-              new language, and made significant progress in your career.
-            </p>
+
+          <div className="grid lg:grid-cols-2 gap-4 w-full">
+            {benefitList.map(({ icon, title, description }, index) => (
+              <Card
+                key={title}
+                className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number"
+              >
+                <CardHeader>
+                  <div className="flex justify-between">
+                    <Icon
+                      name={icon as keyof typeof icons}
+                      size={32}
+                      color="hsl(var(--primary))"
+                      className="mb-6 text-primary"
+                    />
+                    <span className="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30">
+                      0{index + 1}
+                    </span>
+                  </div>
+
+                  <CardTitle>{title}</CardTitle>
+                </CardHeader>
+
+                <CardContent className="text-muted-foreground">
+                  {description}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
-      </div>
-      <div className="w-full max-w-4xl mx-auto  flex justify-center">
-        <div className="space-y-8 flex">
-          <div className="space-y-4 mr-12">
-            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm font-medium dark:bg-gray-800">
-              2019
-            </div>
-            <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Your Activities in 2019</h3>
-            <p className="text-gray-500 dark:text-gray-400">
-              In 2019, you were busy exploring new hobbies and trying to find your passion. You spent a lot of time
-              reading, hiking, and experimenting with different creative projects.
-            </p>
-          </div>
-          <div className="relative w-[2px] bg-gray-200 dark:bg-gray-700 animate-[lineGradient_5s_ease-in-out_infinite]" />
-          <div className="pt-32 space-y-4 ml-12 animate-[slideDown_0.5s_ease-in-out]">
-            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm font-medium dark:bg-gray-800">
-              2020
-            </div>
-            <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Your Activities in 2020</h3>
-            <p className="text-gray-500 dark:text-gray-400">
-              In 2020, you focused on personal growth and self-improvement. You started a meditation practice, learned a
-              new language, and made significant progress in your career.
-            </p>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

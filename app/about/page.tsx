@@ -9,7 +9,7 @@ export default function AboutPage() {
       <Hero/>
       <About />
       <Team />
-      <FAQSection />
+      {/**<FAQSection />**/}
     </>
   );
 }

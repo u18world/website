@@ -45,19 +45,6 @@ export const HeroSection = () => {
                 Explore the World
               </Button>
             </Link>
-
-            <Button
-              asChild
-              variant="secondary"
-              className="w-5/6 md:w-1/4 font-bold"
-            >
-              <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLScqt2ZRUqXmWKMUSA8HMmZKcDXOoc_wbLD-s8R1WMfTssSS0w/viewform"
-                target="_blank"
-              >
-                Register a School
-              </Link>
-            </Button>
           </div>
         </div>
       </div>
