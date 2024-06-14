@@ -1,7 +1,6 @@
 "use client";
 import "@vidstack/react/player/styles/default/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
-
 import { MediaPlayer, MediaProvider } from "@vidstack/react";
 import {
   defaultLayoutIcons,
@@ -127,41 +126,6 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-          </div>
-        </div>
-      </section>
-      <section className="py-12 px-6 ">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-          <div>
-            <img
-              alt="Careers"
-              className="rounded-lg shadow-lg"
-              height={400}
-              src="https://generated.vusercontent.net/placeholder.svg"
-              style={{
-                aspectRatio: "600/400",
-                objectFit: "cover",
-              }}
-              width={600}
-            />
-          </div>
-          <div className="space-y-4">
-            <h2 className="tracking-tighter	text-4xl font-bold text-start text-black dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-b dark:from-neutral-50 dark:to-neutral-400 bg-opacity-50">
-              Under-18 Elections
-            </h2>
-            <p className="text-zinc-400">
-              Under-18 elections are a crucial part of the Under-18 World, with
-              an &apos;Under-18 World Cell&apos; in each school being the core
-              of the world&apos;s functionality within the school.
-            </p>
-            <div className="flex gap-4">
-              <Link href="#">
-                <Button className="">Discover Careers</Button>
-              </Link>
-              <Link href="#">
-                <Button variant="ghost">Discover Careers</Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>

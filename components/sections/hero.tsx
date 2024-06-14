@@ -40,22 +40,28 @@ export const HeroSection = () => {
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button className="w-5/6 md:w-1/4 font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
-              Explore the World
-            </Button>
+            <Link href="/auth/login">
+              <Button className="w-5/6 md:w-1/4 font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
+                Explore the World
+              </Button>
+            </Link>
 
             <Button
               asChild
               variant="secondary"
               className="w-5/6 md:w-1/4 font-bold"
             >
-              <Link href="/" target="_blank">
-                Learn More
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLScqt2ZRUqXmWKMUSA8HMmZKcDXOoc_wbLD-s8R1WMfTssSS0w/viewform"
+                target="_blank"
+              >
+                Register a School
               </Link>
             </Button>
           </div>
         </div>
       </div>
+      {/** 
       <div className="pb-8 pt-8 px-2 rounded-md flex md:items-center md:justify-center">
         <div className="max-w-[84rem] w-full mx-auto relative z-20">
           <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/50 rounded-full blur-3xl"></div>
@@ -67,6 +73,7 @@ export const HeroSection = () => {
           />
         </div>
       </div>
+      */}
     </section>
   );
 };

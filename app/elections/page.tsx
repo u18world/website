@@ -211,7 +211,56 @@ export default function Elections() {
       <div className="h-[100rem] md:h-[80rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mb-40 mt-20">
         <Tabs tabs={tabs} />
       </div>
+      <div className="w-full max-w-4xl mx-auto py-12 md:py-24 lg:py-32 flex justify-center">
+        <div className="space-y-8 flex">
+          <div className="space-y-4 mr-12">
+            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm font-medium dark:bg-gray-800">
+              2019
+            </div>
+            <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Your Activities in 2019</h3>
+            <p className="text-gray-500 dark:text-gray-400">
+              In 2019, you were busy exploring new hobbies and trying to find your passion. You spent a lot of time
+              reading, hiking, and experimenting with different creative projects.
+            </p>
+          </div>
+          <div className=" w-[2px] bg-gray-200 dark:bg-gray-700 animate-[lineGradient_5s_ease-in-out_infinite]" />
+          <div className="pt-32 space-y-4 ml-12 animate-[slideDown_0.5s_ease-in-out]">
+            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm font-medium dark:bg-gray-800">
+              2020
+            </div>
+            <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Your Activities in 2020</h3>
+            <p className="text-gray-500 dark:text-gray-400">
+              In 2020, you focused on personal growth and self-improvement. You started a meditation practice, learned a
+              new language, and made significant progress in your career.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="w-full max-w-4xl mx-auto  flex justify-center">
+        <div className="space-y-8 flex">
+          <div className="space-y-4 mr-12">
+            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm font-medium dark:bg-gray-800">
+              2019
+            </div>
+            <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Your Activities in 2019</h3>
+            <p className="text-gray-500 dark:text-gray-400">
+              In 2019, you were busy exploring new hobbies and trying to find your passion. You spent a lot of time
+              reading, hiking, and experimenting with different creative projects.
+            </p>
+          </div>
+          <div className="relative w-[2px] bg-gray-200 dark:bg-gray-700 animate-[lineGradient_5s_ease-in-out_infinite]" />
+          <div className="pt-32 space-y-4 ml-12 animate-[slideDown_0.5s_ease-in-out]">
+            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm font-medium dark:bg-gray-800">
+              2020
+            </div>
+            <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl">Your Activities in 2020</h3>
+            <p className="text-gray-500 dark:text-gray-400">
+              In 2020, you focused on personal growth and self-improvement. You started a meditation practice, learned a
+              new language, and made significant progress in your career.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-8;

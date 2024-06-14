@@ -50,10 +50,6 @@ const routeList: RouteProps[] = [
     href: "/elections",
     label: "Elections",
   },
-  {
-    href: "/contact",
-    label: "Contact",
-  },
 ];
 
 export const Navbar = () => {

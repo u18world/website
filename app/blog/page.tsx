@@ -34,7 +34,7 @@ export default async function BlogPage() {
           </p>
         </div>
       </div>
-      <BlogSection />
+      {/** <BlogSection /> **/}
     </>
   );
 }
