@@ -13,7 +13,6 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { HeroSection } from "@/components/sections/hero";
 import { PartnersSection } from "@/components/sections/partners";
 

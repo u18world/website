@@ -11,7 +11,7 @@ const Footer = () => {
         <Container className="grid md:grid-cols-[1.5fr_0.5fr_0.5fr] gap-12">
           <div className="flex flex-col gap-6 not-prose">
             <Link href="/">
-              <h3 className="sr-only">nme</h3>
+              <h3 className="sr-only">Name</h3>
               <Image
                 src={""}
                 alt="Logo"

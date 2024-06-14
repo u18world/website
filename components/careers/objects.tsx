@@ -3,63 +3,15 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-
-interface Props {
-  id: number;
-  image: string;
-  title: string;
-  stock: boolean;
-  description: string;
-  price: number;
-}
-
-const object: Props[] = [
-  {
-    id: 1,
-    image:
-      "https://imagedelivery.net/d1yqQAIaphrLYkMc6qUfkA/6a1e6112-0fed-465a-62bf-a8c4ae185100/624x624",
-    title: "Accessibility",
-    stock: false,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-    price: 19.99,
-  },
-  {
-    id: 2,
-    image:
-      "https://imagedelivery.net/d1yqQAIaphrLYkMc6qUfkA/6a1e6112-0fed-465a-62bf-a8c4ae185100/624x624",
-    title: "Community",
-    stock: false,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-    price: 19.99,
-  },
-  {
-    id: 3,
-    image:
-      "https://imagedelivery.net/d1yqQAIaphrLYkMc6qUfkA/6a1e6112-0fed-465a-62bf-a8c4ae185100/624x624",
-    title: "Scalability",
-    stock: false,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-    price: 19.99,
-  },
-  {
-    id: 4,
-    image:
-      "https://imagedelivery.net/d1yqQAIaphrLYkMc6qUfkA/6a1e6112-0fed-465a-62bf-a8c4ae185100/624x624",
-    title: "Gamification",
-    stock: true,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-    price: 19.99,
-  },
-];
+import { carrerProps } from "@/types";
+import { career_object } from "@/config/carrers";
 
 export const ObjectSection = () => {
-  const [selectedProduct, setSelectedProduct] = useState<Props | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<carrerProps | null>(
+    null
+  );
 
-  const handleProductClick = (product: Props) => {
+  const handleProductClick = (product: carrerProps) => {
     setSelectedProduct(product);
   };
 
@@ -82,7 +34,7 @@ export const ObjectSection = () => {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {object.map((prod) => (
+        {career_object.map((prod) => (
           <div
             key={prod.id}
             className="bg-muted/50 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"

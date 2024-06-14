@@ -5,34 +5,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components//ui/card";
-
-interface FeatureProps {
-  title: string;
-  description: string;
-}
-
-const features: FeatureProps[] = [
-  {
-    title: "Leadership and Governance",
-    description:
-      "Our rulers are the Under-18 MLAs. These young leaders create policies and make important decisions that shape our world.",
-  },
-  {
-    title: "Administration",
-    description:
-      "Under-18 IAS officers execute policies and ensure smooth daily operations while helping citizens gain first-hand career and skill experience.",
-  },
-  {
-    title: "Safety and Support",
-    description:
-      "The safety of our citizens is ensured by parents, schools, and WhatIsMyGoal. They provide guidance and protection to help our young leaders succeed.",
-  },
-  {
-    title: "Innovation and Management",
-    description:
-      "We also have talented Under-18s working as the COO, CMO, CTO, and other key roles. Their skills and creativity drive our progress and innovation.",
-  },
-];
+import { FeatureProps } from "@/types";
+import { features } from "@/config/about";
 
 export const About = () => {
   return (
