@@ -7,11 +7,8 @@ export const BlogSection = () => {
     <section id="carrer" className="container text-center py-12 sm:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogs.map((prod) => (
-          <Link href={prod.href}>
-            <div
-              key={prod.id}
-              className="bg-muted/50 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"
-            >
+          <Link key={prod.id} href={prod.href}>
+            <div className="bg-muted/50 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300">
               <div className="rounded-lg overflow-hidden p-4 aspect-w-1 aspect-h-1 group-hover:opacity-75">
                 <img
                   src={prod.image}
