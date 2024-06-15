@@ -359,7 +359,7 @@ export default function Elections() {
           </div>
         </div>
       </section>
-      <div className="h-[80rem] md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-40">
+      <div className="h-[85rem] md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-40">
         <Tabs
           tabs={tabs}
         />
