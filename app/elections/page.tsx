@@ -275,7 +275,7 @@ export default function Elections() {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-[#e74c3c] rounded-2xl p-6 shadow-lg transform -rotate-[5deg]">
+                <div className="bg-[#e74c3c] rounded-2xl p-6 shadow-lg transform rotate-[7deg]">
                   <p className="text-white font-medium">20 bills for 2 years</p>
                 </div>
               </div>
