@@ -230,53 +230,56 @@ export default function Elections() {
             Majority will be implemented by WhatIsMyGoal and larger bills will
             be presented to the government as recommendations.
           </h3>
-          <div className="w-full max-w-4xl mx-auto py-12 md:py-16 lg:py-20">
+          <h2 className="text-3xl text-foreground text-center font-bold mb-2">
+            Powers
+          </h2>
+          <div className="w-full max-w-4xl mx-auto py-24 md:py-28 lg:py-30">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
               <div className="relative">
-                <div className="bg-[#f1c40f] rounded-2xl p-6 shadow-lg transform rotate-[5deg]">
+                <div className="bg-[#f1c40f] rounded-2xl p-6 shadow-lg transform md:rotate-[5deg]">
                   <p className="text-gray-800 font-medium">
                     75% majority to pass a bill
                   </p>
                 </div>
               </div>
-              <div className="relative">
-                <div className="bg-[#2980b9] rounded-2xl p-6 shadow-lg transform -rotate-[10deg]">
+              <div className="pt-10 relative">
+                <div className="bg-[#2980b9] rounded-2xl p-6 shadow-lg transform md:-rotate-[10deg]">
                   <p className="text-white font-medium">
                     3/4 th of bills will be initiated by elected leaders
                   </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-[#e74c3c] rounded-2xl p-6 shadow-lg transform rotate-[8deg]">
+                <div className="bg-[#e74c3c] rounded-2xl p-6 shadow-lg transform md:rotate-[8deg]">
                   <p className="text-white font-medium">
-                    1/4th of bills initiated by brands/partners through WMG
+                    1/4th of bills initiated by brands/<br/>partners through WMG
                   </p>
                 </div>
               </div>
-              <div className="relative">
-                <div className="bg-[#8e44ad] rounded-2xl p-6 shadow-lg transform -rotate-[7deg]">
+              <div className="pt-10 relative">
+                <div className="bg-[#8e44ad] rounded-2xl p-6 shadow-lg transform md:-rotate-[7deg]">
                   <p className="text-white font-medium">
                     Special powers with the superheroes and The Team
                   </p>
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-[#16a085] rounded-2xl p-6 shadow-lg transform rotate-[12deg]">
-                  <p className="text-white font-medium">
-                    Full veto power of THE King!
-                  </p>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="bg-[#27ae60] rounded-2xl p-6 shadow-lg transform -rotate-[5deg]">
+                <div className="bg-[#27ae60] rounded-2xl p-6 shadow-lg transform md:-rotate-[5deg]">
                   <p className="text-white font-medium">
                     4 day assembly sessions
                   </p>
                 </div>
               </div>
-              <div className="relative">
-                <div className="bg-[#e74c3c] rounded-2xl p-6 shadow-lg transform rotate-[7deg]">
+              <div className="pt-10 relative">
+                <div className="bg-stone-300 rounded-2xl p-6 shadow-lg transform md:-rotate-[5deg]">
                   <p className="text-white font-medium">20 bills for 2 years</p>
+                </div>
+              </div>
+              <div className="pt-10 md:pt-0 col-span-2 md:col-span-3 flex justify-center">
+                <div className="bg-[#16a085] rounded-2xl p-6 shadow-lg transform">
+                  <p className="text-white font-medium">
+                    Full veto power of THE King!
+                  </p>
                 </div>
               </div>
             </div>
@@ -382,7 +385,7 @@ export default function Elections() {
           </div>
         </div>
       </section>
-      <div className="h-[85rem] md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-10 mt-10">
+      <div className="h-[85rem] md:h-[55rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-10 mt-10">
         <Tabs
           tabs={tabs}
         />
