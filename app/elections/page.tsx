@@ -111,15 +111,18 @@ export default function Elections() {
           <h2 className="text-3xl md:text-4xl text-foreground text-center font-bold mb-2">
             Three U-18 Parties in the Under-18 World
           </h2>
-          <div className="max-w-5xl mx-auto px-8">
+          <div className="max-w-5xl mx-auto px-1 md:px-8">
             <HoverEffect items={parties} className="lg:grid-cols-3" />
           </div>
-          <div className="space-y-4 md:space-y-0 md:space-x-4 justify-center flex items-center">
+          <div className="justify-center flex items-center">
             <Link href="https://drive.google.com/file/d/1zYXwaS3wCPOgfMqla-k6--W5mUe6Glpp/view">
               <Button className="font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
                 Form 2B U-18 MLA nomination
               </Button>
             </Link>
+          </div>
+          <br />
+          <div className="justify-center flex items-center">
             <Link href="htps://forms.gle/1jbDiz6GDiE19gm26">
               <Button className="font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
                 Form 2B Submission
@@ -194,12 +197,12 @@ export default function Elections() {
       ),
     },
     {
-      title: "Under-18 Assembly",
+      title: "U18_Assembly",
       value: "assembly",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-foreground bg-background">
           <h2 className="text-3xl md:text-4xl text-foreground text-center font-bold mb-2">
-            Under-18 Assembly
+            Under 18-Assembly
           </h2>
           <h3 className="p-4 text-zinc-40 text-center mb-2 ">
             Elected Under-18 MLAs will participate in the Under-18 Assembly to
@@ -259,7 +262,7 @@ export default function Elections() {
       ),
     },
     {
-      title: "Election Officers",
+      title: "Election_Officers",
       value: "officers",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-foreground bg-background">
@@ -274,7 +277,7 @@ export default function Elections() {
           <h2 className="text-2xl md:text-2xl text-foreground text-center font-bold mt-4 mb-2">
             Under-18 Election Officers are the Chiefs of the Under-18 World Cell
           </h2>
-          <div className="max-w-5xl mx-auto px-8">
+          <div className="max-w-5xl mx-auto px-1 md:px-8">
             <HoverEffect items={world_cell} className="lg:grid-cols-3" />
           </div>
         </div>
@@ -297,15 +300,18 @@ export default function Elections() {
           <h2 className="text-2xl md:text-2xl text-foreground text-center font-bold mb-2">
             Selecting the right candidate in the under-18 elections
           </h2>
-          <div className="max-w-5xl mx-auto px-16">
+          <div className="max-w-5xl mx-auto px-1 md:px-16">
             <HoverEffect items={serviceList} />
           </div>
-          <div className="space-y-4 md:space-y-0 md:space-x-4 justify-center flex items-center">
+          <div className="justify-center flex items-center">
             <Link href="https://drive.google.com/file/d/1JUyWLzWlN5exoK8uBFE7FO6Uvp7ncUam/view">
               <Button className="font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
                 Form 6 U-18 Voter Registration
               </Button>
             </Link>
+          </div>
+          <br />
+          <div className="justify-center flex items-center">
             <Link href="https://forms.gle/TYAvHYtvuyDavpBf6">
               <Button className="font-bold group/arrow no-underline space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 text-sm">
                 Form 6 Submission
@@ -353,12 +359,12 @@ export default function Elections() {
           </div>
         </div>
       </section>
-      <div className="h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mb-40 mt-20">
+      <div className="h-[80rem] md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-40">
         <Tabs
           tabs={tabs}
         />
       </div>
-      <section id="benefits" className="container py-24 sm:py-32">
+      <section id="benefits" className="container py-12 sm:py-12">
         <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
