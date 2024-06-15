@@ -153,36 +153,55 @@ export default function Elections() {
               <div className="p-6 md:p-8">
                 <div className="flex flex-col gap-6">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="p-4 rounded-lg">
-                      <h3 className="text-lg font-semibold mb-2">
+                    <div className="p-4 rounded-lg bg-primary">
+                      <h3 className="text-lg font-semibold mb-2 dark:text-background">
                         Legislative
                       </h3>
                       <div className="flex flex-col gap-2">
                         <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+                          <h4 className="text-base font-semibold mb-2">CM</h4>
+                        </div>
+                        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
                           <h4 className="text-base font-semibold mb-2">
-                            CM <br />+ The Team
+                            The Team
                           </h4>
                         </div>
                       </div>
                     </div>
-                    <div className="p-4 rounded-lg">
-                      <h3 className="text-lg font-semibold mb-2">Executive</h3>
+                    <div className="p-4 rounded-lg bg-primary">
+                      <h3 className="text-lg font-semibold mb-2 dark:text-background">
+                        Executive
+                      </h3>
                       <div className="flex flex-col gap-2">
                         <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
-                          <h4 className="text-base font-semibold mb-1">
+                          <h4 className="text-base font-semibold mb-2">
                             10 IAS Officers
-                            <br /> + 6 Clan Lead
                           </h4>
-                          <div className="flex flex-col gap-2"></div>
+                        </div>
+                        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+                          <h4 className="text-base font-semibold mb-2">
+                            6 Clan Lead
+                          </h4>
                         </div>
                       </div>
-                    </div>
-                    <div className="p-4 rounded-lg">
-                      <h3 className="text-lg font-semibold mb-2">Judiciary</h3>
+                    </div>{" "}
+                    <div className="p-4 rounded-lg bg-primary">
+                      <h3 className="text-lg font-semibold mb-2 dark:text-background">
+                        Judiciary
+                      </h3>
                       <div className="flex flex-col gap-2">
                         <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
-                          <h4 className="text-base font-semibold mb-1">
-                            Principal <br />+ 2 School coordinators <br />+
+                          <h4 className="text-base font-semibold mb-2">
+                            Principal
+                          </h4>
+                        </div>
+                        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+                          <h4 className="text-base font-semibold mb-2">
+                            2 School coordinators
+                          </h4>
+                        </div>
+                        <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+                          <h4 className="text-base font-semibold mb-2">
                             Parents
                           </h4>
                         </div>
@@ -200,7 +219,7 @@ export default function Elections() {
       title: "U18_Assembly",
       value: "assembly",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-foreground bg-background">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl pt-10 px-10 text-foreground bg-background">
           <h2 className="text-3xl md:text-4xl text-foreground text-center font-bold mb-2">
             Under 18-Assembly
           </h2>
@@ -250,10 +269,14 @@ export default function Elections() {
               </div>
               <div className="relative">
                 <div className="bg-[#27ae60] rounded-2xl p-6 shadow-lg transform -rotate-[5deg]">
-                  <p className="text-white font-medium">20 bills for 2 years</p>
                   <p className="text-white font-medium">
                     4 day assembly sessions
                   </p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="bg-[#e74c3c] rounded-2xl p-6 shadow-lg transform -rotate-[5deg]">
+                  <p className="text-white font-medium">20 bills for 2 years</p>
                 </div>
               </div>
             </div>
@@ -359,7 +382,7 @@ export default function Elections() {
           </div>
         </div>
       </section>
-      <div className="h-[85rem] md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-40">
+      <div className="h-[85rem] md:h-[50rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-10 mt-10">
         <Tabs
           tabs={tabs}
         />
