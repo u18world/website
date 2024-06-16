@@ -1,7 +1,7 @@
 "use client";
 import "@vidstack/react/player/styles/default/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
-import { MediaPlayer, MediaProvider } from "@vidstack/react";
+import { MediaPlayer, MediaProvider, Poster } from "@vidstack/react";
 import {
   defaultLayoutIcons,
   DefaultVideoLayout,
@@ -27,7 +27,13 @@ export default function Home() {
             src="youtube/BYhRZoPvNfs"
             className="rounded-2xl"
           >
-            <MediaProvider />
+            <MediaProvider>
+              <Poster
+                className="absolute inset-0 block h-full w-full bg-black rounded-md opacity-0 transition-opacity data-[visible]:opacity-100 [&>img]:h-full [&>img]:w-full [&>img]:object-cover"
+                src="https://files.vidstack.io/sprite-fight/poster.webp"
+                alt="Under18 Election Video"
+              />
+            </MediaProvider>
             <DefaultVideoLayout icons={defaultLayoutIcons} />
           </MediaPlayer>
           <div className="space-y-4">
@@ -83,7 +89,9 @@ export default function Home() {
                       width={80}
                     />
                     <div>
-                      <h3 className="text-lg font-bold">Under-18 Assembly Training Session</h3>
+                      <h3 className="text-lg font-bold">
+                        Under-18 Assembly Training Session
+                      </h3>
                       <p className="text-zinc-400  mt-1">
                         The Under-18 World is holding its biennial elections,
                         with candidates campaigning across the country.
