@@ -11,14 +11,11 @@ export const publicRoutes = [
   "/elections",
   "/contact",
   "/careers",
-  "/careers/business-rockstar",
-  "/careers/euphoria",
-  "/careers/hybrid",
-  "/careers/medical",
-  "/careers/psychology",
+  "/careers/:id",
   "/blog",
   "/blog/intro",
   "/about",
+  "/share/:id",
 ];
 
 /**
