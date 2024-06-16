@@ -1,5 +1,5 @@
 "use client";
-
+import Link from 'next/link'
 import { FaUser } from "react-icons/fa";
 import { ExitIcon } from "@radix-ui/react-icons"
 
@@ -31,6 +31,12 @@ export const UserButton = () => {
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-40" align="end">
+        <Link href={`/profile/${user?.id}`}>
+          <DropdownMenuItem>
+            <FaUser className="h-4 w-4 mr-2" />
+            Your Profile
+          </DropdownMenuItem>
+        </Link>
         <LogoutButton>
           <DropdownMenuItem>
             <ExitIcon className="h-4 w-4 mr-2" />
