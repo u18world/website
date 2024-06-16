@@ -1,5 +1,4 @@
 "use client";
-import { currentUser } from "@/lib/auth";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -7,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { UserButton } from "@/components/auth/user-button";
 
 export const Navbar = async () => {
-  const user = await currentUser();
   const pathname = usePathname();
 
   return (
@@ -17,7 +15,7 @@ export const Navbar = async () => {
           asChild
           variant={pathname === "/settings" ? "default" : "outline"}
         >
-          <Link href={`/profile/${user?.id}`}>Your Profile</Link>
+          <Link href={`/profile`}>Your Profile</Link>
         </Button>
         <Button
           asChild
