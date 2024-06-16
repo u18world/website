@@ -1,31 +1,18 @@
 import { ExtendedUser } from "@/next-auth";
-import { PrismaClient } from "@prisma/client";
 import { 
   Card, 
   CardContent, 
   CardHeader
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-const prisma = new PrismaClient();
 
 interface UserInfoProps {
   user?: ExtendedUser;
   label: string;
-  id: string;
+  user_details:any;
 };
 
-export const UserInfo = async ({
-  user,
-  label,
-  id,
-}: UserInfoProps) => {
-  const user_details = await prisma.user.findUnique({
-    where: { id: id },
-    include: {
-      accounts: true, // Include related accounts if needed
-      twoFactorConfirmation: true, // Include related twoFactorConfirmation if needed
-    },
-  });
+export const UserInfo = async ({ user, label, user_details }: UserInfoProps) => {
   return (
     <Card className="w-[600px] shadow-md">
       <CardHeader>
@@ -102,4 +89,4 @@ export const UserInfo = async ({
       </CardContent>
     </Card>
   );
-}
+};
