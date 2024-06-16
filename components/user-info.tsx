@@ -1,18 +1,22 @@
+import { PrismaClient } from "@prisma/client";
 import { ExtendedUser } from "@/next-auth";
-import { 
-  Card, 
-  CardContent, 
-  CardHeader
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+const prisma = new PrismaClient();
 
 interface UserInfoProps {
   user?: ExtendedUser;
   label: string;
-  user_details:any;
-};
+}
 
-export const UserInfo = async ({ user, label, user_details }: UserInfoProps) => {
+export const UserInfo = async ({ user, label }: UserInfoProps) => {
+  const user_details = await prisma.user.findUnique({
+    where: { id: user?.id },
+    include: {
+      accounts: true, // Include related accounts if needed
+      twoFactorConfirmation: true, // Include related twoFactorConfirmation if needed
+    },
+  });
   return (
     <Card className="w-[600px] shadow-md">
       <CardHeader>

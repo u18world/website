@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@/components/auth/user-button";
 
-export const Navbar = async () => {
+export const Navbar = () => {
   const pathname = usePathname();
 
   return (
