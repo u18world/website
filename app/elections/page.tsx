@@ -16,8 +16,6 @@ import { HoverEffect } from "@/components/ui/party-hover-effect";
 import Link from "next/link";
 import { Tabs } from "@/components/sections/tabs";
 import { Button } from "@/components/ui/button";
-import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
-import { Badge } from "@/components/ui/badge";
 
 const serviceList = [
   {
