@@ -1,5 +1,4 @@
 import NextAuth from "next-auth";
-
 import authConfig from "@/auth.config";
 import {
   DEFAULT_LOGIN_REDIRECT,
@@ -47,5 +46,11 @@ export default auth((req) => {
 
 // Optionally, don't invoke Middleware on some paths
 export const config = {
-  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: [
+    "/((?!.+\\.[\\w]+$|_next).*)",
+    "/",
+    "/(api|trpc)(.*)",
+    "/profile/:id*",
+    "/careers/:id",
+  ],
 };

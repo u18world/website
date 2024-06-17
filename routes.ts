@@ -11,11 +11,9 @@ export const publicRoutes = [
   "/elections",
   "/contact",
   "/careers",
-  "/careers/:id",
   "/blog",
   "/blog/intro",
   "/about",
-  "/share/:id",
 ];
 
 /**
