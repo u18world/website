@@ -50,7 +50,7 @@ export const config = {
     "/((?!.+\\.[\\w]+$|_next).*)",
     "/",
     "/(api|trpc)(.*)",
-    "/profile/:id*",
-    "/careers/:id",
+    "/^/profile(?:/([^/#?]+?))[/#?]?$/i",
+    "/^/careers(?:/([^/#?]+?))[/#?]?$/i",
   ],
 };

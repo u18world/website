@@ -14,7 +14,7 @@ export default function Careers() {
             <h1>
               Our{" "}
               <span className="text-transparent px-2 bg-gradient-to-r from-blue-300 to-primary bg-clip-text">
-                Carrer options
+                Career options
               </span>
             </h1>
           </div>
