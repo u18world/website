@@ -12,15 +12,17 @@ export default function Careers() {
         <div className="text-center space-y-8">
           <div className="max-w-screen-md mx-auto text-center text-7xl font-bold">
             <h1>
-              Our{" "}
+              Explore, Experience and{" "}
               <span className="text-transparent px-2 bg-gradient-to-r from-blue-300 to-primary bg-clip-text">
-                Career options
+                Master Careers
               </span>
             </h1>
           </div>
-          <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            {`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!`}
+          <p className="mx-auto text-xl text-muted-foreground">
+            {`
+            Experience diverse careers through mini-internships with professionals. 
+            Engage in hands-on activities, real-world projects, and conversations with experts in fields like entrepreneurship, medicine, and psychology.
+            `}
           </p>
         </div>
       </div>

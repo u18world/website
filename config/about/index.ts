@@ -117,19 +117,23 @@ export const teamList: TeamProps[] = [
 
 export const stats: statsProps[] = [
   {
-    quantity: "160",
+    quantity: "10",
+    description: "Cities",
+  },
+  {
+    quantity: "160+",
     description: "Schools in Hyderabad",
   },
   {
-    quantity: "1.50k",
+    quantity: "1M+",
     description: "Under-18 Citizens",
   },
   {
-    quantity: "105",
+    quantity: "105+",
     description: "Under-18 MLAs",
   },
   {
-    quantity: "2000",
+    quantity: "2000+",
     description: "Under-18 Entrepreneurs, movie makers etc.",
   },
 ];
