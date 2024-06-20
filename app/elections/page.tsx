@@ -432,15 +432,12 @@ export default function Elections() {
         </div>
       </section>
       <section className="container py-12 sm:py-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Images
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            text
-          </p>
-          <div className="pt-4">
-            <ParallaxScroll images={images} />
-          </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Images from previous event
+        </h2>
+        <div className="pt-4">
+          <ParallaxScroll images={images} />
+        </div>
       </section>
     </div>
   );

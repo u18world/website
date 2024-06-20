@@ -18,7 +18,7 @@ export default function Careers() {
               </span>
             </h1>
           </div>
-          <p className="mx-auto text-xl text-muted-foreground">
+          <p className="max-w-screen-md mx-auto text-xl text-muted-foreground">
             {`
             Experience diverse careers through mini-internships with professionals. 
             Engage in hands-on activities, real-world projects, and conversations with experts in fields like entrepreneurship, medicine, and psychology.

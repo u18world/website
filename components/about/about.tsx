@@ -15,15 +15,12 @@ export const About = () => {
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
           <div className="bg-green-0 flex flex-col justify-between text-center">
             <h2 className="text-3xl md:text-4xl font-bold ">
-              How It{" "}
-              <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-                Works{" "}
-              </span>
-              Step-by-Step Guide
+              Today's Under-18 Leaders, Tomorrow's Real-World Champions
             </h2>
             <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Veritatis dolor pariatur sit!
+              Today, we are Under-18 politicians, engineers, and entrepreneurs.
+              Tomorrow, we will be the real-world politicians, engineers,
+              entrepreneurs, and more.
             </p>
             <section className="container py-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

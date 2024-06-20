@@ -2,12 +2,12 @@ import { statsProps, FAQProps, TeamProps, FeatureProps } from "@/types";
 
 export const features: FeatureProps[] = [
   {
-    title: "Leadership and Governance",
+    title: "Rulers",
     description:
-      "Our rulers are the Under-18 MLAs. These young leaders create policies and make important decisions that shape our world.",
+      "Our rulers are the Under-18 PM, CMs and the MLAs. These Under-18 leaders create policies and make important decisions that shape our world.",
   },
   {
-    title: "Administration",
+    title: "Service Commission",
     description:
       "Under-18 IAS officers execute policies and ensure smooth daily operations while helping citizens gain first-hand career and skill experience.",
   },
@@ -68,7 +68,7 @@ export const teamList: TeamProps[] = [
   {
     imageUrl: "/king.webp",
     name: "King",
-    position: "Joker",
+    position: "CIO (Chief Information Officer)",
     socialNetworks: [],
   },
   {
@@ -94,7 +94,7 @@ export const teamList: TeamProps[] = [
       {
         name: "Instagram",
         url: "https://www.instagram.com/wn_.agastya",
-      },
+      }
     ],
   },
   {
@@ -115,17 +115,28 @@ export const teamList: TeamProps[] = [
 ];
 
 
-export const stats: statsProps[] = [
+export const going: statsProps[] = [
   {
-    quantity: "10",
+    quantity: "10+",
     description: "Cities",
   },
+  {
+    quantity: "1000+",
+    description: "Schools",
+  },
+  {
+    quantity: "1M+",
+    description: "Under-18 Citizens",
+  },
+];
+
+export const stats: statsProps[] = [
   {
     quantity: "160+",
     description: "Schools in Hyderabad",
   },
   {
-    quantity: "1M+",
+    quantity: "1.5k+",
     description: "Under-18 Citizens",
   },
   {
