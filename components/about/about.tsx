@@ -15,7 +15,8 @@ export const About = () => {
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
           <div className="bg-green-0 flex flex-col justify-between text-center">
             <h2 className="text-3xl md:text-4xl font-bold ">
-              Today's Under-18 Leaders, Tomorrow's Real-World Champions
+              Today&apos;s Under-18 Leaders, Tomorrow&apos;s Real-World
+              Champions
             </h2>
             <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
               Today, we are Under-18 politicians, engineers, and entrepreneurs.
