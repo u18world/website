@@ -157,11 +157,8 @@ export default function Home() {
               ambassador, leader, and finally an Under-18 superstar.
             </p>
             <div className="flex gap-4">
-              <Link href="#">
-                <Button className="">Meet the superheroes</Button>
-              </Link>
-              <Link href="#">
-                <Button variant="ghost">Learn More</Button>
+              <Link href="/auth/register">
+                <Button className="">Begin your journey</Button>
               </Link>
             </div>
           </div>
@@ -204,11 +201,8 @@ export default function Home() {
               careers, with experts for 24 career domains.
             </p>
             <div className="flex gap-4">
-              <Link href="#">
+              <Link href="/careers">
                 <Button className="">Discover Careers</Button>
-              </Link>
-              <Link href="#">
-                <Button variant="ghost">Discover Careers</Button>
               </Link>
             </div>
           </div>
@@ -225,11 +219,8 @@ export default function Home() {
               &apos;superstars&apos; who perform well.
             </p>
             <div className="flex gap-4">
-              <Link href="#">
+              <Link href="/superheroes">
                 <Button className="">Meet the superheroes</Button>
-              </Link>
-              <Link href="#">
-                <Button variant="ghost">Learn More</Button>
               </Link>
             </div>
           </div>
