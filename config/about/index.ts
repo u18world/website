@@ -25,59 +25,90 @@ export const features: FeatureProps[] = [
 
 export const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
+    imageUrl: "/karthikeya.jpg",
+    name: "Karthikeya Vankineni",
+    position: "COO (Chief Operating Officer)",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "Linkedin",
+        url: "https://www.linkedin.com/karthikeya-vankineni-49bbb0249/",
       },
       {
         name: "Instagram",
-        url: "https://www.instagram.com/",
+        url: "https://www.instagram.com/karthikvankineni/",
       },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
+    imageUrl: "/",
+    name: "Sashrika",
+    position: "Position",
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "https://www.linkedin.com/",
+      },
+    ],
+  },
+  {
+    imageUrl: "/kushi.jpeg",
+    name: "Nanda Kaushal",
     position: "Tech Lead",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/avalynn-develops-aa3756314/",
       },
       {
         name: "Instagram",
-        url: "https://www.instagram.com/",
+        url: "https://www.instagram.com/nanduu.1117",
       },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
+    imageUrl: "/king.webp",
+    name: "King",
+    position: "Joker",
+    socialNetworks: [],
+  },
+  {
+    imageUrl: "/lee.webp",
+    name: "Lee Sarma",
+    position: "CSFoO (Chief Food Officer)",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-
       {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/chitralee-sarma-01aba2126",
       },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
+    imageUrl: "/agastya.jpeg",
+    name: "Agastya",
+    position: "CFO (Chief Financial Officer)",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/agastya-reddy-53185b2a9/",
+      },
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/wn_.agastya",
+      },
+    ],
+  },
+  {
+    imageUrl: "/manvi.jpeg",
+    name: "Manvi Mishra ",
+    position: "CVO (Chief Visual Officer)",
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/manvi-mishra-344692306",
+      },
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/manvi_184",
       },
     ],
   },
