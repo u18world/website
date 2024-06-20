@@ -6,7 +6,7 @@ import { fontSans } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/toaster";
 
 import { Navbar } from "@/components/navbar";
-import Footer from "@/components/navigation/footer";
+import Footer from "@/components/footer";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SessionProvider } from "next-auth/react";

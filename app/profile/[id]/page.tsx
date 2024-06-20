@@ -12,6 +12,7 @@ import {
   CardFooter,
   Card,
 } from "@/components/ui/card";
+import { LoginButton } from "@/components/auth/login-button";
 
 const prisma = new PrismaClient();
 
@@ -28,10 +29,27 @@ export default async function ProfileInfo({ params }: any) {
 
   if(!user) {
     return (
-        <div>
-            no info found on this kid
+      <div className="relative flex flex-col justify-center place-items-center min-h-screen">
+        <h2 className="text-center font-heading m-10 text-6xl sm:text-7xl lg:text-8xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-black	 ">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+            No Info Found on the User{" "}
+          </span>
+          <span className="">🚧</span>
+        </h2>
+        <div className="items-center justify-between gap-4 grid grid-cols-2">
+          <Link href="/">
+            <Button variant="outline" className="h-12 w-24 text-lg font-mono">
+              Go home
+            </Button>
+          </Link>
+          <LoginButton asChild>
+            <Button variant="outline" className="h-12 w-24 text-lg font-mono">
+              Sign Up
+            </Button>
+          </LoginButton>
         </div>
-    )
+      </div>
+    );
   }
 
   return (

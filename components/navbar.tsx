@@ -104,7 +104,7 @@ export const Navbar = () => {
             <SheetFooter className="flex-col sm:flex-col justify-start items-start">
               <LoginButton asChild>
                 <Button variant="secondary" size="sm">
-                  Sign in
+                  Sign up
                 </Button>
               </LoginButton>
               <Separator className="mb-2" />
@@ -132,7 +132,7 @@ export const Navbar = () => {
 
       <div className="hidden lg:flex">
         <LoginButton asChild>
-          <Button size="sm">Sign in</Button>
+          <Button size="sm">Sign up</Button>
         </LoginButton>
         <ToggleTheme />
 
