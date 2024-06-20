@@ -10,6 +10,7 @@ import {
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { TeamProps, SociaNetworkslProps } from "@/types";
 import { teamList } from "@/config/about";
+import Image from "next/image";
 
 export const Team = () => {
   const socialIcon = (iconName: string) => {
@@ -47,9 +48,11 @@ export const Team = () => {
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
             >
               <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                <img
+                <Image
                   src={imageUrl}
                   alt={`${name} ${position}`}
+                  width={96}
+                  height={96}
                   className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
                 />
                 <CardTitle className="text-center">{name}</CardTitle>
@@ -57,11 +60,6 @@ export const Team = () => {
                   {position}
                 </CardDescription>
               </CardHeader>
-
-              <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </CardContent>
-
               <CardFooter>
                 {socialNetworks.map(({ name, url }: SociaNetworkslProps) => (
                   <div key={name}>
