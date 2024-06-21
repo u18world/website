@@ -66,10 +66,11 @@ export default async function RootLayout({
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <AuthToaster />
             <Navbar />
             {children}
+            <Footer />
             <Toaster />
             <TailwindIndicator />
           </ThemeProvider>
