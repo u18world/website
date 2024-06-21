@@ -8,7 +8,7 @@ export default function Superheroes() {
         <span className="">⏳</span>
       </h2>
       <p className="text-2xl md:text-3xl px-6 max-w-3xl text-center m-5 text-slate-800 dark:text-slate-100 font-thin">
-        The superheros haven&apos;t yet been decleared so check back later! 👋
+        The superheros haven&apos;t yet been declared so check back later! 👋
       </p>
     </div>
   );
