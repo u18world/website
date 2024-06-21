@@ -1,6 +1,6 @@
 "use client";
 import { ParallaxScroll} from "@/components/ui/parallax-scroll";
-
+import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/icon";
 import { icons } from "lucide-react";
@@ -432,65 +432,116 @@ export default function Elections() {
         </div>
       </section>
       <section className="container py-12 sm:py-12">
-  <h2 className="text-3xl md:text-4xl font-bold mb-4">
-    Images from previous event
-  </h2>
-  <div className="flex justify-between pt-4">
-    <div className="w-1/2 pr-2">
-      <h3 className="text-xl font-semibold mb-2">Experience politics: Through unique places</h3>
-      <img src="/elections/image1.jpg" alt="Event Image 1" className="w-full h-auto" />
-    </div>
-    <div className="w-1/2 pl-2">
-      <h3 className="text-xl font-semibold mb-2">Oath taking Ceremony</h3>
-      <img src="/elections/image2.jpg" alt="Event Image 2" className="w-full h-auto" />
-    </div>
-  </div>
-  <div className="flex justify-between pt-4">
-    <div className="w-1/2 pr-2">
-      <h3 className="text-xl font-semibold mb-2">Experience politics: Through unique places</h3>
-      <img src="/elections/image5.jpg" alt="Event Image 1" className="w-full h-auto" />
-    </div>
-    <div className="w-1/2 pl-2">
-      <h3 className="text-xl font-semibold mb-2">Campaining</h3>
-      <img src="/elections/image4.jpg" alt="Event Image 2" className="w-full h-auto" />
-    </div>
-  </div>
-  <div className="flex justify-between pt-4">
-    <div className="w-1/2 pr-2">
-      <h3 className="text-xl font-semibold mb-2">Experience politics: Through unique places</h3>
-      <img src="/elections/image7.jpg" alt="Event Image 1" className="w-full h-auto" />
-    </div>
-    <div className="w-1/2 pl-2">
-      <h3 className="text-xl font-semibold mb-2">Campaining</h3>
-      <img src="/elections/image10.jpg" alt="Event Image 2" className="w-full h-auto" />
-    </div>
-  </div>
-</section>
-<section className="container py-12 sm:py-12">
-  <div className="flex justify-center pt-4">
-    <div className="w-1/2">
-    <h3 className="text-xl font-semibold mb-2">Voting Day</h3>
-      <img src="/elections/image3.jpg" alt="Highlighted Event Image" className="w-full h-auto" />
-      <img src="/elections/image6.jpg" alt="Highlighted Event Image" className="w-full h-auto" />
-      <img src="/elections/image9.jpg" alt="Highlighted Event Image" className="w-full h-auto" />
-      <img src="/elections/image11.jpg" alt="Highlighted Event Image" className="w-full h-auto" />
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Images from previous event
+        </h2>
+        <div className="flex justify-between pt-4">
+          <div className="w-1/2 pr-2 space-y-5">
+            <h3 className="text-xl font-semibold mb-2">
+              Experience politics: Through unique places
+            </h3>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image1.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image5.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image7.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+          </div>
+          <div className="w-1/2 pl-2 space-y-5">
+            <h3 className="text-xl font-semibold mb-2">Oath taking Ceremony</h3>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image2.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Campaining</h3>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image4.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image10.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+          </div>
       </div>
-  </div>
-</section>
+        <div className="flex justify-center pt-4">
+          <div className="w-1/2 space-y-5">
+            <h3 className="text-xl font-semibold mb-2">Voting Day</h3>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image3.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image6.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image9.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+            <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-md border bg-background/50 shadow">
+              <Image
+                fill
+                className="object-cover"
+                src="/elections/image11.jpg"
+                alt={""}
+                sizes="100%"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
-
-const images = [
-  "/elections/image1.jpg",
-  "/elections/image2.jpg",
-  "/elections/image3.jpg",
-  "/elections/image4.jpg",
-  "/elections/image5.jpg",
-  "/elections/image6.jpg",
-  "/elections/image7.jpg",
-  "/elections/image8.jpg",
-  "/elections/image9.jpg",
-  "/elections/image10.jpg",
-  "/elections/image11.jpg",
-];
