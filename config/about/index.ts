@@ -40,17 +40,6 @@ export const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "/",
-    name: "Sashrika",
-    position: "Position",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/",
-      },
-    ],
-  },
-  {
     imageUrl: "/kushi.jpeg",
     name: "Nanda Kaushal",
     position: "Tech Lead",

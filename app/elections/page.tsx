@@ -180,7 +180,7 @@ export default function Elections() {
                         </div>
                         <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
                           <h4 className="text-base font-semibold mb-2">
-                            6 Clan Lead
+                            6 Clan Leaders
                           </h4>
                         </div>
                       </div>
@@ -202,7 +202,7 @@ export default function Elections() {
                         </div>
                         <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
                           <h4 className="text-base font-semibold mb-2">
-                            Parents
+                            2 Parents
                           </h4>
                         </div>
                       </div>
@@ -395,9 +395,9 @@ export default function Elections() {
               Under-18 Elections Roadmap
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-              ducimus reprehenderit architecto rerum similique facere odit
-              deleniti necessitatibus quo quae.
+              The Under-18 elections process begins with the selection of
+              election officers and culminates in the election of an Under-18
+              MLA for each constituency.
             </p>
           </div>
 
@@ -433,7 +433,7 @@ export default function Elections() {
       </section>
       <section className="container py-12 sm:py-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Images from previous event
+          Hyderabad under-18 elections
         </h2>
         <div className="flex justify-between pt-4">
           <div className="w-1/2 pr-2 space-y-5">
@@ -499,7 +499,7 @@ export default function Elections() {
               />
             </div>
           </div>
-      </div>
+        </div>
         <div className="flex justify-center pt-4">
           <div className="w-1/2 space-y-5">
             <h3 className="text-xl font-semibold mb-2">Voting Day</h3>
