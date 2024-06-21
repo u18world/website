@@ -70,7 +70,6 @@ export default async function RootLayout({
             <AuthToaster />
             <Navbar />
             {children}
-            <Footer />
             <Toaster />
             <TailwindIndicator />
           </ThemeProvider>
