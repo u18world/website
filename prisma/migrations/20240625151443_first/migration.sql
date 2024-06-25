@@ -8,6 +8,7 @@ CREATE TYPE "CarrerInrests" AS ENUM ('Medicine', 'Finance', 'Business_and_entrep
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
     "name" TEXT,
+    "grade" INTEGER,
     "email" TEXT,
     "total_score" INTEGER DEFAULT 0,
     "skill_score" INTEGER DEFAULT 0,
@@ -16,6 +17,7 @@ CREATE TABLE "User" (
     "achievements_score" INTEGER DEFAULT 0,
     "phone" INTEGER,
     "city" TEXT DEFAULT '',
+    "school" TEXT DEFAULT '',
     "parent_name" TEXT DEFAULT '',
     "parent_email" TEXT DEFAULT '',
     "carrer_intrest_1" "CarrerInrests" NOT NULL DEFAULT 'Others',

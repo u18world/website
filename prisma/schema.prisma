@@ -46,6 +46,7 @@ enum CarrerInrests {
 model User {
   id                        String                    @id @default(cuid())
   name                      String?
+  grade                     Int?
   email                     String?                   @unique
   total_score               Int?                      @default(0)
   skill_score               Int?                      @default(0)
@@ -54,6 +55,7 @@ model User {
   achievements_score        Int?                      @default(0)
   phone                     Int?      
   city                      String?                   @default("")
+  school                    String?                   @default("")
   parent_name               String?                   @default("")
   parent_email              String?                   @default("")
   carrer_intrest_1          CarrerInrests             @default(Others) 
