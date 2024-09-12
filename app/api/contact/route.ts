@@ -2,7 +2,7 @@ import { EmailTemplate } from "@/templates/email";
 import { Resend } from "resend";
 import * as React from "react";
 
-const resend = new Resend("re_vAi4ytTc_FNZ48fw9rYREmDoQRfZK76pu");
+const resend = new Resend("");
 
 export async function POST(request: Request) {
   const body = await request.json();
